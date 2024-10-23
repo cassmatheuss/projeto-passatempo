@@ -64,5 +64,5 @@ Melhor desempenho e carregamento de páginas.
 Contribuição
 Se você deseja contribuir para o projeto, por favor, siga as instruções abaixo:
 
-Licença
+## Licença
 Este projeto é licenciado sob a licença MIT. Veja o arquivo LICENSE para mais detalhes.
