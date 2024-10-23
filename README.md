@@ -40,6 +40,7 @@ projeto-passatempo/
 │               └── 
 │               └── 
 ├── package.json
+├── LICENSE
 ├── README.md
 └── .gitignore
 ```
