@@ -4,8 +4,8 @@
   "description": "Projeto realizado para a instituição Jogoteca, do Passatempo Educativo.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-    ""
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev":  "nodemon ./packages/backend/index.js"
   },
   "author": "",
   "license": "ISC",
