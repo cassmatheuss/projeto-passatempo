@@ -5,6 +5,7 @@ const router = express.Router();
 
 const userService = new UserService()
 
+//Criar usuário
 router.post('/', async (req, res) => {
     try {
       await userService.create(req.body)
