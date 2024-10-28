@@ -15,10 +15,14 @@
   <body>
     <header class="header">
       <nav class="nav">
-        <ul class="list">
-          <li>
-            <img src="https://source.unsplash.com/random" alt="Random Image" />
-          </li>
+        <img src="https://source.unsplash.com/random" alt="Random Image" />
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="overlay" id="overlay"></div>
+        <ul class="list" id="nav-list">
           <li><a id="selected" href="/">Home</a></li>
           <li><a href="/about">Benefícios</a></li>
           <li><a href="/contact">Como funciona</a></li>
@@ -28,5 +32,6 @@
         </ul>
       </nav>
     </header>
+    <script src="script.js"></script>
   </body>
 </html>
