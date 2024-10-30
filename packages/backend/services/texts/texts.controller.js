@@ -53,6 +53,18 @@ router.delete('/:id', async (req, res) => {
   }
 });
 
+// Atualizar texto por id
+router.put('/:id', async (req, res) => {
+  try {
+      const updatedText = await textService.update(req.params.id, req.body.text);
+      if (!updatedText) {
+          return res.status(404).send('Texto não encontrado.');
+      }
+      res.status(200).json(`Texto ${req.params.id} atualizado com sucesso!`);
+  } catch (error) {
+      res.status(500).send('Ocorreu um erro inesperado.');
+  }
+});
 
 
 module.exports = router;

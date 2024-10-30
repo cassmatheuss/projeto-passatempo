@@ -27,6 +27,15 @@ class TextRepository {
     return
   }
 
+  async update(id, newText) {
+    const updatedText = await Text.findByIdAndUpdate(
+      id,
+      { text: newText },
+      { new: true }
+    );
+    return updatedText;
+  }
+
 }
 
 module.exports = TextRepository;

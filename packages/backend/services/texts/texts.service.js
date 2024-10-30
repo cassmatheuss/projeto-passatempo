@@ -21,6 +21,9 @@ class TextService {
     return this.textRepository.remove(id);
   }
 
+  async update(id, newText) {
+    return this.textRepository.update(id, newText);
+  }
 }
 
 module.exports = TextService;
