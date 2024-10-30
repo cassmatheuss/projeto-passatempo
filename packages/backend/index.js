@@ -1,4 +1,6 @@
 const userController = require('./services/users/users.controller');
+const textController = require('./services/texts/texts.controller');
+
 const express = require('express')
 const db = require('./config/db')
 const cors = require('cors')
@@ -11,6 +13,7 @@ app.use(express.json());
 
 //middlewares
 app.use('/users', userController);
+app.use('/texts', textController);
 
 db()
 
