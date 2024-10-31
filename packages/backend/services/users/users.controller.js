@@ -11,7 +11,7 @@ router.post('/', async (req, res) => {
       await userService.create(req.body)
       res.status(201).json(`Usuário ${req.body.username} criado com sucesso!`)
     } catch (error) {
-      res.status(404).send('Ocorreu um erro inesperado.');
+      res.status(500).send('Ocorreu um erro inesperado.');
     }
 });
 
@@ -21,7 +21,7 @@ router.get('/', async (req, res) => {
     const users = await userService.findAll()
     res.status(200).json(users)
   } catch (error) {
-    res.status(404).send('Ocorreu um erro inesperado.');
+    res.status(500).send('Ocorreu um erro inesperado.');
   }
 })
 
