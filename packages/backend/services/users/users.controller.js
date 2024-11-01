@@ -1,10 +1,16 @@
 const UserService = require("./users.service");
 const express = require('express')
 const checkPassword = require('../../../../shared/checkPassword.utils')
+const dotenv = require("dotenv"); 
+const jwt = require('jsonwebtoken')
+
+dotenv.config()
 
 const router = express.Router();
 
 const userService = new UserService()
+
+const JWT_SECRET = process.env.JWT_SECRET
 
 //Criar usuário
 router.post('/', async (req, res) => {
@@ -66,6 +72,7 @@ router.put('/:id', async (req, res) => {
   }
 });
 
+// Fazer login do usuário
 router.post('/login', async (req, res) => {
   try {
     const username = req.query.username;
@@ -82,8 +89,16 @@ router.post('/login', async (req, res) => {
     const passIsCorrect = await checkPassword(password, user.password_hash);
 
     if (passIsCorrect) {
-      // jwt aqui
-      return res.status(200).send('Login bem-sucedido');
+      const token = jwt.sign(
+        {
+          username: username,
+        },
+        JWT_SECRET,
+        {
+          expiresIn: '24h'
+        }
+      )
+      return res.status(200).send({ token });
     } else {
       return res.status(401).send('Usuário ou senha incorretos.');
     }
