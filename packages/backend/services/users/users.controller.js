@@ -1,5 +1,6 @@
 const UserService = require("./users.service");
 const express = require('express')
+const checkPassword = require('../../../../shared/checkPassword.utils')
 
 const router = express.Router();
 
@@ -64,5 +65,33 @@ router.put('/:id', async (req, res) => {
       res.status(500).send('Ocorreu um erro inesperado.');
   }
 });
+
+router.post('/login', async (req, res) => {
+  try {
+    const username = req.query.username;
+    const password = req.query.password;
+
+    const users = await userService.findAll();
+    
+    const user = users.find(u => u.username === username);
+    
+    if (!user) {
+      return res.status(404).send('Usuário não encontrado');
+    }
+
+    const passIsCorrect = await checkPassword(password, user.password_hash);
+
+    if (passIsCorrect) {
+      // jwt aqui
+      return res.status(200).send('Login bem-sucedido');
+    } else {
+      return res.status(401).send('Usuário ou senha incorretos.');
+    }
+  } catch (error) {
+    console.error(error);
+    return res.status(500).send('Ocorreu um erro inesperado');
+  }
+});
+
 
 module.exports = router;

@@ -25,7 +25,6 @@ router.get('/', async (req, res) => {
   }
 })
 
-
 // Listar texto por id
 router.get('/:id', async (req, res) => {
   try {

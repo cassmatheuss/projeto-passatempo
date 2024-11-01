@@ -40,8 +40,6 @@ class UserRepository {
     return updatedUser;
   }
 
-
-
 }
 
 module.exports = UserRepository;
