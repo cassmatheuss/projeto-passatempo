@@ -94,3 +94,16 @@ img{
     font-family: '', sans-serif;
     font-size: 25px;
 }
+.carrossel {
+    width: 200px;
+    overflow: hidden;
+}
+
+.slide {
+    width: 100%;
+    float: left;
+}
+
+.slide:not(:first-child) {
+    margin-left: -100;
+}
