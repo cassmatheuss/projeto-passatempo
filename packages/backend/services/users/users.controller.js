@@ -85,22 +85,23 @@ router.post('/login', async (req, res) => {
     if (!user) {
       return res.status(404).send('Usuário não encontrado');
     }
-
-    const passIsCorrect = await checkPassword(password, user.password_hash);
-
-    if (passIsCorrect) {
-      const token = jwt.sign(
-        {
-          username: username,
-        },
-        JWT_SECRET,
-        {
-          expiresIn: '24h'
-        }
-      )
-      return res.status(200).send({ token });
-    } else {
-      return res.status(401).send('Usuário ou senha incorretos.');
+    else {
+      const passIsCorrect = await checkPassword(password, user.password_hash);
+  
+      if (passIsCorrect) {
+        const token = jwt.sign(
+          {
+            username: username,
+          },
+          JWT_SECRET,
+          {
+            expiresIn: '24h'
+          }
+        )
+        return res.status(200).send({ token });
+      } else {
+        return res.status(401).send('Usuário ou senha incorretos.');
+      }
     }
   } catch (error) {
     console.error(error);
