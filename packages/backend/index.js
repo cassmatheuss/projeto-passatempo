@@ -1,5 +1,6 @@
 const userController = require('./services/users/users.controller');
 const textController = require('./services/texts/texts.controller');
+const emailController = require('./services/email/email.controller');
 
 const express = require('express')
 const db = require('./config/db')
@@ -14,6 +15,7 @@ app.use(express.json());
 //middlewares
 app.use('/users', userController);
 app.use('/texts', textController);
+app.use('/email', emailController);
 
 db()
 
