@@ -95,9 +95,7 @@ img{
     font-size: 25px;
 }
 .carrossel {
-    position: relative;
     width: 200px;
-    overflow: hidden;
     border-radius: 10;
 }
 
