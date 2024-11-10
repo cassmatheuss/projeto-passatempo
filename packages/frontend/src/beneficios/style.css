@@ -30,7 +30,7 @@ body {
     top: 8%;
     width: 90%;
     height: fit-content;
-    background-color: rgba(255, 165, 0, 0.5);
+    background-color: rgba(255, 166, 0, 0.5);
     z-index: 1;
     border-radius: 50px;
     backdrop-filter: blur(5px);
@@ -97,7 +97,7 @@ body {
     width: 400px;
     height: 280px;
     margin-bottom: 5%;
-    background-color: rgba(255, 165, 0, 0.7);
+    background-color: rgba(255, 165, 0, 0.5);
     z-index: 1;
     backdrop-filter: blur(5px);
     display: flex;
@@ -110,7 +110,7 @@ body {
     top: 720px;
     color: black;
     z-index: 2;
-    font-family: sans-serif;
+    font-family: "Ubuntu", sans-serif;
     font-size: 25px;
 }
 
@@ -196,7 +196,7 @@ body {
 }
 
 .carousel-controls>button {
-    background: rgba(255, 165, 0, 0.7);
+    background: rgba(255, 165, 0, 0.5);
     border: none;
     padding: 0.5em;
     font-size: 2rem;
@@ -225,7 +225,7 @@ body {
     backdrop-filter: blur(5px);
 }
 
-.textocoloridos {
+.texto_coloridos {
     display: flex;
     gap: 20px;
     padding: 20px;
@@ -236,7 +236,7 @@ body {
     top: 800px;
     color: black;
     z-index: 2;
-    font-family: sans-serif; 
+    font-family: "Ubuntu", sans-serif;
     font-size: 25px;
 }
 
@@ -244,7 +244,7 @@ body {
     top: 800px;
     color: black;
     z-index: 2;
-    font-family: sans-serif; 
+    font-family: "Ubuntu", sans-serif;
     font-size: 25px;
 }
 
@@ -252,7 +252,7 @@ body {
     top: 800px;
     color: black;
     z-index: 2;
-    font-family: sans-serif; 
+    font-family: "Ubuntu", sans-serif;
     font-size: 25px;
 }
 
@@ -262,8 +262,9 @@ body {
     border-radius: 15px;
     font-size: 14px;
     line-height: 1.6;
-    box-shadow: 0 4px 8px rgba(255, 255, 0, 1);
+    background-color: rgba(255, 255, 0, 0.5);
     z-index: 1;
+    backdrop-filter: blur(5px);
 }
 
 .retangulo-azul {
@@ -272,8 +273,9 @@ body {
     border-radius: 15px;
     font-size: 14px;
     line-height: 1.6;
-    box-shadow: 0 4px 8px rgba(0, 0, 255, 1);
+    background-color: rgba(0, 0, 245, 0.5);
     z-index: 1;
+    backdrop-filter: blur(5px);
 }
 
 .retangulo-vermelho {
@@ -282,11 +284,13 @@ body {
     border-radius: 15px;
     font-size: 14px;
     line-height: 1.6;
-    box-shadow: 0 4px 8px rgba(255, 0, 0, 1);
+    background-color: rgba(255, 0, 0, 0.5);
     z-index: 1;
+    backdrop-filter: blur(5px);
 }
 
 .jogoteca h2{
+    font-family: "Luckiest Guy", sans-serif;
     font-size: 18px;
     margin-bottom: 10px;
     color: black;
@@ -294,6 +298,7 @@ body {
 }
 
 .brinquedos h2{
+    font-family: "Luckiest Guy", sans-serif;
     font-size: 18px;
     margin-bottom: 10px;
     color: black;
@@ -301,8 +306,20 @@ body {
 }
 
 .oficinas h2{
+    font-family: "Luckiest Guy", sans-serif;
     font-size: 18px;
     margin-bottom: 10px;
     color: black;
     z-index: 2;
+}
+
+.imagens-retangulos {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.imagem-container {
+    text-align: center;
 }
