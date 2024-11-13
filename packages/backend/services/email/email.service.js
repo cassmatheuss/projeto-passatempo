@@ -25,6 +25,10 @@ class EmailService {
     return this.emailRepository.update(id, newEmail);
   }
   
+  async sendEmailContato(data) {
+    return this.emailRepository.sendEmailContato(data);
+  }
+
 }
 
 module.exports = EmailService;

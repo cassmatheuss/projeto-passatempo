@@ -1,7 +1,6 @@
 const Email = require("../../services/email/email.model");
-
+const sendEmail = require("../../../../shared/sendEmail.utils")
 class EmailRepository {
-
 
   async create(data) {
     const newEmail = new Email({
@@ -35,6 +34,12 @@ class EmailRepository {
     );
     return updatedEmail;
   }
+
+  async sendEmailContato(data) {
+    sendEmail(data)
+    return
+  }
+
 }
 
 module.exports = EmailRepository;
