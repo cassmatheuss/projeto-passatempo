@@ -40,6 +40,7 @@ projeto-passatempo/
 │               └── 
 │               └── 
 ├── package.json
+├── LICENSE
 ├── README.md
 └── .gitignore
 ```
@@ -47,7 +48,12 @@ projeto-passatempo/
 ## Instalação e Configuração
 Para rodar o projeto localmente, siga os passos abaixo:
 
-Instale as dependências utilizando o npm:
+abra o terminal e utilize o comando:
+```bash
+git clone https://github.com/cassmatheuss/projeto-passatempo.git
+```
+
+Abra o projeto no vsCode e instale as dependências utilizando o comando no terminal:
 ```bash
 npm install
 ```
