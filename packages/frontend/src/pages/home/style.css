@@ -1,0 +1,86 @@
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('seu-fundo.jpg');
+    background-size: cover;
+    color: #fff;
+}
+
+h1 {
+    font-family: 'Luckiest Guy', cursive;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+    z-index: 10;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-family: 'Luckiest Guy', cursive;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+    margin-top: 20px;
+}
+
+.jogoteca {
+    margin-bottom: 40px;
+    padding: 40px 20px;
+    text-align: center;
+    position: relative;
+}
+
+.sobre-nos {
+    margin-bottom: 40px;
+    padding: 40px 20px;
+    text-align: center;
+    position: relative;
+}
+
+.jogoteca-content, .sobre-nos-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+    flex-direction: row-reverse;
+}
+
+.image {
+    max-width: 350px;
+    border-radius: 10px;
+}
+
+.text-bubble {
+    background-color: #6787E7;
+    color: #333;
+    padding: 25px;
+    border-radius: 15px;
+    position: relative;
+    max-width: 400px;
+    z-index: 1; /* Garante que o balão fique acima da imagem */
+    margin-left: 20px;
+}
+
+.text-bubble p, .text-bubble h2 {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.jogoteca-content, .sobre-nos-content {
+    display: flex;
+    align-items: center;
+    gap: 100px;
+}
+
+@media (max-width: 768px) {
+    .jogoteca-content, .sobre-nos-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+}
