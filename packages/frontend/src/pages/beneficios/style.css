@@ -5,12 +5,18 @@
 }
 
 .background {
-  width: auto;
-  height: 100vh;
+  min-width: 100vw;
+  min-height: 100vh;
+  overflow: hidden;
   position: fixed;
+  overflow: hidden;
+  top: 0;
+  left: 0;
   z-index: -1;
+  background-attachment: fixed;
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
 }
 
 .container {
@@ -28,6 +34,7 @@
   width: fit-content;
   height: 500px;
   background-color: rgba(255, 161, 0, 0.5);
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(15px);
 }
 
@@ -108,6 +115,7 @@
   padding-right: 20px;
   padding-left: 40px;
   border-radius: 30px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
 }
 
 .texto {
@@ -199,6 +207,7 @@
 
 .carousel-controls > button {
   background: rgba(255, 165, 0, 0.5);
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
   border: none;
   padding: 0.5em;
   font-size: 2rem;
@@ -209,6 +218,7 @@
   border-radius: 50%;
   margin: 0 0.5em;
   transition: 0.3s ease;
+  backdrop-filter: blur(5px);
 }
 
 .carousel-controls > button:hover {
@@ -266,6 +276,7 @@
   line-height: 1.6;
   background-color: rgba(255, 255, 0, 0.5);
   backdrop-filter: blur(5px);
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
 }
 
 .retangulo-azul {
@@ -276,6 +287,7 @@
   line-height: 1.6;
   background-color: rgba(0, 0, 245, 0.5);
   backdrop-filter: blur(5px);
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
 }
 
 .retangulo-vermelho {
@@ -286,6 +298,7 @@
   line-height: 1.6;
   background-color: rgba(255, 0, 0, 0.5);
   backdrop-filter: blur(5px);
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
 }
 
 .jogoteca h2 {
