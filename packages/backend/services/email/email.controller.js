@@ -68,7 +68,7 @@ router.put('/:id', async (req, res) => {
 // Enviar email
 router.post('/send', async (req, res) => {
   try {
-      const sendEmail = await emailService.sendEmailContato(req.body);
+      await emailService.sendEmailContato(req.body);
       res.status(200).json(`Email enviado com sucesso!`);
   } catch (error) {
       res.status(500).send('Ocorreu um erro inesperado.');
