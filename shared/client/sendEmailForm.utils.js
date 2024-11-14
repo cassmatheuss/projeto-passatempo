@@ -1,5 +1,4 @@
 const axios = require('axios')
-const validator = require("email-validator");
 const getMailService = require("./getMailService.utils")
 API_URL = process.env.API_URL
 
