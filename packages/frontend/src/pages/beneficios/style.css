@@ -594,3 +594,13 @@ li > a:hover {
   box-sizing: border-box;
   font-size: 16px;
 }
+
+.background {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  z-index: -1;
+  background-image: url('../../assets/fundo.svg');
+  background-size: cover;
+  background-position: center;
+}
