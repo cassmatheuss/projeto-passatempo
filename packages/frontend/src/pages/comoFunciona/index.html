@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Como funciona</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Luckiest+Guy&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="nav">
+        <img src="../../assets/sol_logo.svg" alt="Random Image" />
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="overlay" id="overlay"></div>
+        <ul class="list" id="nav-list">
+          <li><a id="home" href="/">Home</a></li>
+          <li><a id="selected" href="/about">Benefícios</a></li>
+          <li><a id="howWork" href="/contact">Como funciona</a></li>
+          <li>
+            <a class="doe" id="donate" href="/doe">Doe<br />Agora</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <img
+      class="background"
+      src="../../assets/fundo.svg"
+      alt="Imagem de fundo branco"
+    />
+    <div class="colunas">
+      <section class="linha">
+        <div class="textBubbleOrange">
+          <h1 class="titulos">Oficinas</h1>
+          <p class="conteudo">
+            Uma série  de oficinas e workshops ligados a temas culturais, que
+            incentivem a criatividade dos participantes como construção de
+            brinquedos com sucata, contação de histórias e rodas cantadas. Cada
+            mês temos uma temática diferente que é direcionada ao público
+            infanto-juvenil. O horário e dia das oficinas é acertado da escola e
+            pode ser feito um treinamento para que os educadores apliquem os
+            jogos com suas respectivas turmas.
+          </p>
+        </div>
+        <img
+          class="imgBubble"
+          src="../../assets/ciclo_de_gestao.svg"
+          alt="Imagem do ciclo de oficinas"
+        />
+      </section>
+      <section class="linha">
+        <div class="fundoIndio">
+          <img
+            class="imgIndio"
+            src="../../assets/jogo_indio.svg"
+            alt="Imagem de um jogo indígena"
+          />
+        </div>
+        <ul class="textBubbleBlue">
+          <li>
+            1° Passo: Apresentação do projeto para professores da instituição;
+          </li>
+          <li>
+            2° Passo: Entender qual a necessidade dos professores diante da
+            matéria e jogo solicitado;
+          </li>
+          <li>
+            3° Passo: Escolha dos jogos para o desenvolvimento com os
+            estudantes;
+          </li>
+          <li>
+            4° Passo: Definir se serão feitas as oficinas ou a formação dos
+            professores para a própria aplicação; 
+          </li>
+          <li>
+            5° Passo: Adaptação do jogo e do conteúdo para as idades adequadas;
+          </li>
+          <li>6° Passo: Aplicação do projeto Jogoteca!</li>
+        </ul>
+      </section>
+      <section class="formulario">
+        <h1 class="tituloForm">Abaixo, você encontrará um formulário de inscrição para que as escolas possam se inscrever no projeto e entrarem em contato:</h1>
+        <form class="form" action="https://formspree.io/f/xnqoqzqz" method="POST">
+          <h1>Informações da Escola</h1>
+          <label for="name">Nome da escola:</label>
+          <input type="text" id="name" name="name" required />
+          <label for="email">E-mail:</label>
+          <input type="email" id="email" name="email" required />
+          <label for="phone">Telefone:</label>
+          <input type="tel" id="phone" name="phone" required />
+          <label for="city">Endereço:</label>
+          <input type="text" id="city" name="city" required />
+          <h1>Informações do Representante</h1>
+          <label for="name">Nome do Representante:</label>
+          <input type="text" id="name" name="name" required />
+          <label for="email">E-mail do Representante:</label>
+          <input type="email" id="email" name="email" required />
+          <label for="phone">Telefone de contato do Representante:</label>
+          <input type="tel" id="phone" name="phone" required />
+          <label for="cargo">Cargo do Representante:</label>
+          <input type="cargo" id="cargo" name="cargo" required />
+          <button type="submit">Enviar</button>
+      </section>
+      <a href="" class="confiraButton">CONFIRA A PÁGINA DE CATÁLOGO!</a>
+    </div>
+    <!-- footer -->
+    <footer class="footer">
+      <div class="contatos">
+        <h1>Contatos</h1>
+        <p class="email">passatempo@passatempoeducativo.org.br</p>
+        <p>Rua dos Democratas, 975, São Paulo, Brasil</p>
+      </div>
+      <div class="redesSociais">
+        <a
+          href="https://www.instagram.com/passatempoeducativo?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+        >
+          <img src="../../assets/Frame.svg" alt="Instagram" />
+        </a>
+        <a
+          href="https://api.whatsapp.com/send?phone=%2B5511997579540&context=ARBRH1oy_mexh6YlxI6vVK9R1vvls9ToyIackxwr4hG1hGIp2EFCAT17aA6CyhYiGjjpDrby06vTioh2hsUiC_l7LoG0uSTeA4qWhvFF36cj0ajs6qcBJ2Pn_dQ6iwl_LDtLGQn8mp1tZ_g76eCO9155Ug&source=FB_Page&app=facebook&entry_point=page_cta&fbclid=IwY2xjawGhhN9leHRuA2FlbQIxMAABHZl8PCazS7U03JvPtXwX5R6HRgC1u_SM_6_gdm4yv2QY-RuHgu65APnmnw_aem_y2CYjn8BgHOAzoMem4HEaw"
+        >
+          <img src="../../assets" alt="Whatsapp" />
+        </a>
+
+        <a
+          href="https://www.facebook.com/Passatempoedu/?locale=pt_BR"
+          target="_blank"
+        >
+          <img src="../../assets//SVGRepo_iconCarrier.svg" alt="Facebook" />
+        </a>
+      </div>
+    </footer>
+  </body>
+</html>
