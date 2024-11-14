@@ -1,22 +1,68 @@
 const API_URL = 'http://127.0.0.1:3000';
 
-document.addEventListener("DOMContentLoaded", () => {
+const verifyToken = async (token) => {
+    try {
+        const response = await axios.get(`${API_URL}/users/token/${token}`);
+        return response.data;
+    } catch (error) {
+        console.error("Erro ao verificar o token.", error);
+        return false;
+    }
+};
+
+const getJWTToken = () => {
+    const name = "jwt_token=";
+    const decodedCookie = decodeURIComponent(document.cookie);
+    const cookies = decodedCookie.split(';');
+    for (let i = 0; i < cookies.length; i++) {
+        let cookie = cookies[i];
+        while (cookie.charAt(0) === ' ') {
+            cookie = cookie.substring(1);
+        }
+        if (cookie.indexOf(name) === 0) {
+            return cookie.substring(name.length, cookie.length);
+        }
+    }
+    return 
+};
+
+const checkTokenAndLoadPage = async () => {
+    const token = getJWTToken();
+    if (!token) {
+        alert("Você precisa estar autenticado para acessar esta página.");
+        window.location.href = "/login"; 
+        return;
+    }
+
+    const isValidToken = await verifyToken(token);
+    if (!isValidToken) {
+        alert("Token inválido. Por favor, faça login novamente.");
+        window.location.href = "/login";
+        return;
+    }
+
+    document.body.style.display = 'block';
+};
+
+document.body.style.display = 'none';
+
+document.addEventListener("DOMContentLoaded", async () => {
+    await checkTokenAndLoadPage();
+
     const hamburger = document.getElementById("hamburger");
     const navList = document.getElementById("nav-list");
     const overlay = document.getElementById("overlay");
-  
+
     hamburger.addEventListener("click", () => {
-      navList.classList.toggle("active"); // Ativa/desativa o menu
-      overlay.classList.toggle("active"); // Ativa/desativa o overlay
+        navList.classList.toggle("active");
+        overlay.classList.toggle("active");
     });
-  
-    // Fecha o menu se o usuário clicar no overlay
+
     overlay.addEventListener("click", () => {
-      navList.classList.remove("active");
-      overlay.classList.remove("active");
+        navList.classList.remove("active");
+        overlay.classList.remove("active");
     });
-  });
-  
+});
 
 const getMailService = async () => {
     try {
@@ -26,7 +72,7 @@ const getMailService = async () => {
         console.error("Erro ao buscar email.", error);
         throw error;
     }
-}
+};
 
 const changeMail = async (newEmail) => {
     try {
@@ -39,7 +85,7 @@ const changeMail = async (newEmail) => {
         console.error("Erro ao setar email: ", error);
         throw error;
     }
-}
+};
 
 window.onload = async function () {
     try {

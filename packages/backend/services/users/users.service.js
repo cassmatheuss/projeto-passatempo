@@ -24,6 +24,12 @@ class UserService {
   async update(id, data) {
     return this.userRepository.update(id, data);
   }
+
+  async verifyToken(token) {
+    return this.userRepository.verifyToken(token)
+  }
+
+
 }
 
 module.exports = UserService;

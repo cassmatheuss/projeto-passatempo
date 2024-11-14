@@ -109,5 +109,14 @@ router.post('/login', async (req, res) => {
   }
 });
 
+router.get('/token/:token', async (req, res) => {
+  try {
+    const token = await userService.verifyToken(req.params.token);
+    res.status(200).json(token.valid);
+  } catch (error) {
+    console.error(error);
+   
+  }
+});
 
 module.exports = router;

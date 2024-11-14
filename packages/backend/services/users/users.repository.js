@@ -1,7 +1,7 @@
 const User = require("../../services/users/users.model");
 const crypto = require("crypto");
 const hashPassword = require("../../../../shared/hashPassword.utils");
-
+const validateToken = require("../../../../shared/validateToken.utils")
 class UserRepository {
   async create(data) {
     const newUser = new User({
@@ -40,6 +40,12 @@ class UserRepository {
     return updatedUser;
   }
 
+  async verifyToken(token) {
+    return validateToken(token)
+  }
+
 }
+
+
 
 module.exports = UserRepository;
