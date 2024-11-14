@@ -1,3 +1,5 @@
+
+
 document.addEventListener("DOMContentLoaded", () => {
   const hamburger = document.getElementById("hamburger");
   const navList = document.getElementById("nav-list");
@@ -13,4 +15,5 @@ document.addEventListener("DOMContentLoaded", () => {
     navList.classList.remove("active");
     overlay.classList.remove("active");
   });
+  
 });

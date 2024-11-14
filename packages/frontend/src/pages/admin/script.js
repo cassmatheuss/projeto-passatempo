@@ -87,6 +87,16 @@ const changeMail = async (newEmail) => {
     }
 };
 
+const getTexto = async (id) => {
+    try {
+      const response = await axios.get(`${API_URL}/texts/` + id);
+      return response.data.text;
+    } catch (error) {
+      console.error("Erro ao buscar texto: ", error);
+      throw error;
+    }
+  };
+
 window.onload = async function () {
     try {
         const emailFromService = await getMailService();
@@ -94,6 +104,38 @@ window.onload = async function () {
         emailField.value = emailFromService;
     } catch (error) {
         alert('Não foi possível carregar o e-mail.');
+    }
+
+    try {
+        const texto = await getTexto('beneficioslaranja');
+        const textoField = document.getElementById('containerlaranja');
+        textoField.value = texto;
+    } catch (error) {
+        alert('Não foi alterar o texto.');
+    }
+
+    try {
+        const texto = await getTexto('beneficiosjogoteca');
+        const textoField = document.getElementById('beneficiosjogoteca');
+        textoField.value = texto;
+    } catch (error) {
+        alert('Não foi alterar o texto.');
+    }
+
+    try {
+        const texto = await getTexto('beneficiosbrinquedos');
+        const textoField = document.getElementById('beneficiosbrinquedos');
+        textoField.value = texto;
+    } catch (error) {
+        alert('Não foi alterar o texto.');
+    }
+
+    try {
+        const texto = await getTexto('beneficiosoficinas');
+        const textoField = document.getElementById('beneficiosoficinas');
+        textoField.value = texto;
+    } catch (error) {
+        alert('Não foi alterar o texto.');
     }
 };
 
@@ -115,5 +157,101 @@ document.getElementById('form-email').addEventListener('submit', async function 
         alert('E-mail alterado para: ' + emailValue); 
     } catch (error) {
         alert('Não foi possível alterar o e-mail.');
+    }
+});
+
+const setTexto = async (id, texto) => {
+    try {
+        const response = await axios.put(`${API_URL}/texts/` + id, {
+          text: texto
+        });
+        return response.data.text; 
+    } catch (error) {
+        console.error("Erro ao buscar texto: ", error);
+        throw error;
+    }
+  };
+
+document.getElementById('form-containerlaranja').addEventListener('submit', async function (event) {
+    event.preventDefault();
+
+    const texto = document.getElementById('containerlaranja');
+    const textoValue = texto.value;
+
+    console.log('Formulário enviado');
+
+    if (!textoValue) {
+        alert('Por favor, insira um texto válido.');
+        return;
+    }
+
+    try {
+        await setTexto('beneficioslaranja', textoValue);
+        alert('Texto alterado.'); 
+    } catch (error) {
+        alert('Não foi possível alterar o texto.');
+    }
+});
+
+document.getElementById('form-beneficiosjogoteca').addEventListener('submit', async function (event) {
+    event.preventDefault();
+
+    const texto = document.getElementById('beneficiosjogoteca');
+    const textoValue = texto.value;
+
+    console.log('Formulário enviado');
+
+    if (!textoValue) {
+        alert('Por favor, insira um texto válido.');
+        return;
+    }
+
+    try {
+        await setTexto('beneficiosjogoteca', textoValue);
+        alert('Texto alterado.'); 
+    } catch (error) {
+        alert('Não foi possível alterar o texto.');
+    }
+});
+
+document.getElementById('form-beneficiosbrinquedos').addEventListener('submit', async function (event) {
+    event.preventDefault();
+
+    const texto = document.getElementById('beneficiosbrinquedos');
+    const textoValue = texto.value;
+
+    console.log('Formulário enviado');
+
+    if (!textoValue) {
+        alert('Por favor, insira um texto válido.');
+        return;
+    }
+
+    try {
+        await setTexto('beneficiosbrinquedos', textoValue);
+        alert('Texto alterado.'); 
+    } catch (error) {
+        alert('Não foi possível alterar o texto.');
+    }
+});
+
+document.getElementById('form-beneficiosoficinas').addEventListener('submit', async function (event) {
+    event.preventDefault();
+
+    const texto = document.getElementById('beneficiosoficinas');
+    const textoValue = texto.value;
+
+    console.log('Formulário enviado');
+
+    if (!textoValue) {
+        alert('Por favor, insira um texto válido.');
+        return;
+    }
+
+    try {
+        await setTexto('beneficiosoficinas', textoValue);
+        alert('Texto alterado.'); 
+    } catch (error) {
+        alert('Não foi possível alterar o texto.');
     }
 });

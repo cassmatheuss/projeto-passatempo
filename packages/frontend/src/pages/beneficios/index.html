@@ -11,12 +11,14 @@
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Luckiest+Guy&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
       rel="stylesheet"
     />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./script.js"></script>
   </head>
 
   <body>
     <header class="header">
       <nav class="nav">
-        <img src="https://source.unsplash.com/random" alt="Random Image" />
+        <img src="../../assets/sol_logo.svg" alt="Random Image" />
         <div class="hamburger" id="hamburger">
           <span></span>
           <span></span>
@@ -194,39 +196,45 @@
       <div class="retangulo-amarelo">
         <div class="jogoteca">
           <h2>Jogoteca</h2>
-          <p>
-            Acervo com aproximadamente 180 jogos com origens em civilizações
-            antigas e países dos cinco continentes.
-          </p>
-          <p>Jogos variados de raciocínio, sorte, destreza, estratégia.</p>
-          <p>Direcionado ao público com idade a partir de 8 anos.</p>
+          <div class="texto-jogoteca">
+            <p>
+              Acervo com aproximadamente 180 jogos com origens em civilizações
+              antigas e países dos cinco continentes.
+            </p>
+            <p>Jogos variados de raciocínio, sorte, destreza, estratégia.</p>
+            <p>Direcionado ao público com idade a partir de 8 anos.</p>
+          </div>
         </div>
       </div>
       <div class="retangulo-azul">
         <div class="brinquedos">
           <h2>Brinquedos</h2>
-          <p>
-            Acervo formado somente por brinquedos artesanais de artistas dos
-            diversos cantos do Brasil que retratam através do seu artesanato a
-            cultura brasileira;
-          </p>
-          <p>
-            Brinquedos tradicionais ou criativos, não importa, o que vale é a
-            brincadeira
-          </p>
-          <p>Dirigido ao público infantil</p>
+          <div class="texto-brinquedos">
+            <p>
+              Acervo formado somente por brinquedos artesanais de artistas dos
+              diversos cantos do Brasil que retratam através do seu artesanato a
+              cultura brasileira;
+            </p>
+            <p>
+              Brinquedos tradicionais ou criativos, não importa, o que vale é a
+              brincadeira
+            </p>
+            <p>Dirigido ao público infantil</p>
+          </div>
         </div>
       </div>
       <div class="retangulo-vermelho">
         <div class="oficinas">
           <h2>Oficinas</h2>
-          <p>
-            Uma série de oficinas e workshops ligados a temas culturais, que
-            incentivem a criatividade dos participantes como construção de
-            brinquedos com sucata, contação de histórias, rodas cantadas.
-          </p>
-          <p>Cada mês temos uma temática diferente.</p>
-          <p>É direcionado ao público infanto-juvenil.</p>
+          <div class="texto-oficinas">
+            <p>
+              Uma série de oficinas e workshops ligados a temas culturais, que
+              incentivem a criatividade dos participantes como construção de
+              brinquedos com sucata, contação de histórias, rodas cantadas.
+            </p>
+            <p>Cada mês temos uma temática diferente.</p>
+            <p>É direcionado ao público infanto-juvenil.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -253,7 +261,6 @@
         <p>Instagram</p>
       </div>
     </footer>
-
     <script>
       const prevButton = document.querySelector(".prev");
       const nextButton = document.querySelector(".next");
@@ -269,7 +276,7 @@
         if (currentSlide > 0) {
           currentSlide--;
         } else {
-          currentSlide = totalSlides - 1; // Volta para o último slide
+          currentSlide = totalSlides - 1;
         }
         updateCarousel();
       }
@@ -278,13 +285,13 @@
         if (currentSlide < totalSlides - 1) {
           currentSlide++;
         } else {
-          currentSlide = 0; // Volta para o primeiro slide
+          currentSlide = 0; 
         }
         updateCarousel();
       }
 
       function updateCarousel() {
-        const offset = -currentSlide * 0.016 * slideWidth; // Move o carrossel com base no slide atual
+        const offset = -currentSlide * 0.016 * slideWidth; 
         slides.style.transform = `translateX(${offset}%)`;
       }
 

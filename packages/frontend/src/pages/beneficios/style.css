@@ -98,7 +98,7 @@
 }
 
 .retangulo {
-  height: 280px;
+  height: 380px;
   margin-bottom: 5%;
   background-color: rgba(255, 165, 0, 0.5);
   backdrop-filter: blur(5px);
@@ -108,14 +108,25 @@
   padding-right: 20px;
   padding-left: 40px;
   border-radius: 30px;
+  text-align: center;
+  width: 40%;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto; 
 }
 
 .texto {
-  top: 720px;
   color: black;
   font-family: "Ubuntu", sans-serif;
   font-size: 25px;
+  line-height: 1.5;
+  word-wrap: break-word; 
+  text-align: justify;
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
 }
+
 
 .center {
   align-items: center;
@@ -529,8 +540,8 @@ li > a:hover {
     top: 0;
     right: 0;
     background-color: #6787e7;
-    transform: translateX(100%); /* Fora da tela inicialmente */
-    transition: all 3s; /* Controla a transição de entrada */
+    transform: translateX(100%);
+    transition: all 3s;
     transition-duration: 300ms;
     padding-top: 90px;
     z-index: 15;
@@ -549,4 +560,37 @@ li > a:hover {
 #selected {
   text-decoration: underline !important;
   text-underline-offset: 5px;
+}
+
+.texto-jogoteca {
+  color: black;
+  font-family: "Ubuntu", sans-serif;
+  word-wrap: break-word; 
+  text-align: left;
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+.texto-brinquedos {
+  color: black;
+  font-family: "Ubuntu", sans-serif;
+  word-wrap: break-word; 
+  text-align: left;
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+.texto-oficinas {
+  color: black;
+  font-family: "Ubuntu", sans-serif;
+  word-wrap: break-word; 
+  text-align: left;
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 16px;
 }
