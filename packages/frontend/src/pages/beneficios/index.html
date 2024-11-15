@@ -27,8 +27,8 @@
         </div>
         <div class="overlay" id="overlay"></div>
         <ul class="list" id="nav-list">
-          <li><a id="home" href="/">Home</a></li>
-          <li><a id="selected" href="/about">Benefícios</a></li>
+          <li><a id="home" href="../home/index.html">Home</a></li>
+          <li><a id="selected" href="./index.html">Benefícios</a></li>
           <li><a id="howWork" href="/contact">Como funciona</a></li>
           <li>
             <a class="doe" id="donate" href="/doe">Doe<br />Agora</a>
@@ -36,8 +36,7 @@
         </ul>
       </nav>
     </header>
-    <script src="carrossel.js"></script>
-    
+
     <div class="container">
       <div class="retangulo-laranja">
         <div class="post-it">
@@ -258,42 +257,7 @@
         <p>Instagram</p>
       </div>
     </footer>
-    <script>
-      const prevButton = document.querySelector(".prev");
-      const nextButton = document.querySelector(".next");
-      const slides = document.querySelector(".inner");
-      const slideWidth = document.querySelector(".carrosselSlide").clientWidth;
-      let currentSlide = 0;
-
-      const totalSlides = document.querySelectorAll(
-        ".inner .carrosselSlide"
-      ).length;
-
-      function goToPrevSlide() {
-        if (currentSlide > 0) {
-          currentSlide--;
-        } else {
-          currentSlide = totalSlides - 1;
-        }
-        updateCarousel();
-      }
-
-      function goToNextSlide() {
-        if (currentSlide < totalSlides - 1) {
-          currentSlide++;
-        } else {
-          currentSlide = 0; 
-        }
-        updateCarousel();
-      }
-
-      function updateCarousel() {
-        const offset = -currentSlide * 0.016 * slideWidth; 
-        slides.style.transform = `translateX(${offset}%)`;
-      }
-
-      prevButton.addEventListener("click", goToPrevSlide);
-      nextButton.addEventListener("click", goToNextSlide);
-    </script>
+    <script src="./navbar.js"></script>
+    <script src="./carrossel.js"></script>
   </body>
 </html>

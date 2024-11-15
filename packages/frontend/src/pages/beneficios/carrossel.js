@@ -1,19 +1,35 @@
+const prevButton = document.querySelector(".prev");
+      const nextButton = document.querySelector(".next");
+      const slides = document.querySelector(".inner");
+      const slideWidth = document.querySelector(".carrosselSlide").clientWidth;
+      let currentSlide = 0;
 
+      const totalSlides = document.querySelectorAll(
+        ".inner .carrosselSlide"
+      ).length;
 
-document.addEventListener("DOMContentLoaded", () => {
-  const hamburger = document.getElementById("hamburger");
-  const navList = document.getElementById("nav-list");
-  const overlay = document.getElementById("overlay");
+      function goToPrevSlide() {
+        if (currentSlide > 0) {
+          currentSlide--;
+        } else {
+          currentSlide = totalSlides - 1;
+        }
+        updateCarousel();
+      }
 
-  hamburger.addEventListener("click", () => {
-    navList.classList.toggle("active"); // Ativa/desativa o menu
-    overlay.classList.toggle("active"); // Ativa/desativa o overlay
-  });
+      function goToNextSlide() {
+        if (currentSlide < totalSlides - 1) {
+          currentSlide++;
+        } else {
+          currentSlide = 0; 
+        }
+        updateCarousel();
+      }
 
-  // Fecha o menu se o usuário clicar no overlay
-  overlay.addEventListener("click", () => {
-    navList.classList.remove("active");
-    overlay.classList.remove("active");
-  });
-  
-});
+      function updateCarousel() {
+        const offset = -currentSlide * 0.016 * slideWidth; 
+        slides.style.transform = `translateX(${offset}%)`;
+      }
+
+      prevButton.addEventListener("click", goToPrevSlide);
+      nextButton.addEventListener("click", goToNextSlide);
