@@ -53,6 +53,10 @@
   margin: 10px;
 }
 
+.indio {
+  flex-direction: row-reverse;
+}
+
 .textBubbleBlue {
   display: flex;
   flex-direction: column;
@@ -257,6 +261,128 @@ form > button:hover {
 .redesSociais {
   display: flex;
   gap: 20px;
+}
+
+/* Estilos para telas pequenas (sm) - Menores que 640px */
+@media (max-width: 640px) {
+  .linha {
+    flex-direction: column;
+  }
+
+  .tituloForm {
+    font-size: 24px;
+  }
+
+  .textBubbleOrange,
+  .textBubbleBlue {
+    width: 90%;
+    font-size: 16px;
+    padding: 15px;
+  }
+
+  .titulos {
+    font-size: 30px;
+  }
+
+  .conteudo {
+    font-size: 16px;
+  }
+
+  .imgBubble {
+    width: 80%;
+  }
+
+  .imgIndio {
+    width: 90%; 
+  }
+
+  .fundoIndio {
+    width: 80%; 
+  }
+
+  form > label {
+    font-size: 20px; 
+  }
+
+  form > input {
+    font-size: 18px; 
+  }
+
+  form > button {
+    width: 60%; 
+    font-size: 18px;
+  }
+
+  .confiraButton {
+    width: 80%;
+    font-size: 18px;
+  }
+
+  .footer {
+    flex-direction: column; 
+    text-align: center;
+    height: auto; 
+    padding: 20px;
+  }
+}
+
+/* Estilos para telas médias (md) - Entre 641px e 768px */
+@media (min-width: 641px) and (max-width: 768px) {
+  .linha {
+    flex-direction: column; 
+  }
+
+  .textBubbleOrange,
+  .textBubbleBlue {
+    width: 70%; 
+    font-size: 18px;
+    padding: 20px;
+  }
+
+  .titulos {
+    font-size: 36px; 
+  }
+
+  .conteudo {
+    font-size: 18px; 
+  }
+
+  .imgBubble {
+    width: 60%; 
+  }
+
+  .imgIndio {
+    width: 90%;
+  }
+
+  .fundoIndio {
+    width: 60%;
+  }
+
+  form > label {
+    font-size: 22px; 
+  }
+
+  form > input {
+    font-size: 20px; 
+  }
+
+  form > button {
+    width: 50%;
+    font-size: 20px;
+  }
+
+  .confiraButton {
+    width: 70%;
+    font-size: 20px;
+  }
+
+  .footer {
+    flex-direction: column; 
+    text-align: center;
+    height: auto; 
+    padding: 20px;
+  }
 }
 
 /* HEADER */
