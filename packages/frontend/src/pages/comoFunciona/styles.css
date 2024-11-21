@@ -267,6 +267,7 @@ form > button:hover {
 @media (max-width: 640px) {
   .linha {
     flex-direction: column;
+    gap: 30px;
   }
 
   .tituloForm {
@@ -330,6 +331,7 @@ form > button:hover {
 @media (min-width: 641px) and (max-width: 768px) {
   .linha {
     flex-direction: column; 
+    gap: 30px;
   }
 
   .textBubbleOrange,
@@ -504,6 +506,10 @@ li > a:hover {
 
 /* Mobile styles */
 @media (max-width: 768px) {
+  .sol_logo {
+    width: 150px;
+  }
+
   .list li {
     opacity: 0; /* Oculta inicialmente */
     transform: translateX(200px); /* Posição inicial */
