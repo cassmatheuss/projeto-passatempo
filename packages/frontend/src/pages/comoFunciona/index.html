@@ -13,6 +13,24 @@
     />
   </head>
   <body>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const hamburger = document.getElementById("hamburger");
+        const navList = document.getElementById("nav-list");
+        const overlay = document.getElementById("overlay");
+
+        hamburger.addEventListener("click", () => {
+          navList.classList.toggle("active"); // Ativa/desativa o menu
+          overlay.classList.toggle("active"); // Ativa/desativa o overlay
+        });
+
+        // Fecha o menu se o usuário clicar no overlay
+        overlay.addEventListener("click", () => {
+          navList.classList.remove("active");
+          overlay.classList.remove("active");
+        });
+      });
+    </script>
     <header class="header">
       <nav class="nav">
         <img src="../../assets/sol_logo.svg" alt="Random Image" />
@@ -24,8 +42,8 @@
         <div class="overlay" id="overlay"></div>
         <ul class="list" id="nav-list">
           <li><a id="home" href="/">Home</a></li>
-          <li><a id="selected" href="/about">Benefícios</a></li>
-          <li><a id="howWork" href="/contact">Como funciona</a></li>
+          <li><a id="" href="../beneficios/index.html">Benefícios</a></li>
+          <li><a id="selected" href="/contact">Como funciona</a></li>
           <li>
             <a class="doe" id="donate" href="/doe">Doe<br />Agora</a>
           </li>
@@ -57,14 +75,7 @@
           alt="Imagem do ciclo de oficinas"
         />
       </section>
-      <section class="linha">
-        <div class="fundoIndio">
-          <img
-            class="imgIndio"
-            src="../../assets/jogo_indio.svg"
-            alt="Imagem de um jogo indígena"
-          />
-        </div>
+      <section class="linha indio">
         <ul class="textBubbleBlue">
           <li>
             1° Passo: Apresentação do projeto para professores da instituição;
@@ -86,10 +97,24 @@
           </li>
           <li>6° Passo: Aplicação do projeto Jogoteca!</li>
         </ul>
+        <div class="fundoIndio">
+          <img
+            class="imgIndio"
+            src="../../assets/jogo_indio.svg"
+            alt="Imagem de um jogo indígena"
+          />
+        </div>
       </section>
       <section class="formulario">
-        <h1 class="tituloForm">Abaixo, você encontrará um formulário de inscrição para que as escolas possam se inscrever no projeto e entrarem em contato:</h1>
-        <form class="form" action="https://formspree.io/f/xnqoqzqz" method="POST">
+        <h1 class="tituloForm">
+          Abaixo, você encontrará um formulário de inscrição para que as escolas
+          possam se inscrever no projeto e entrarem em contato:
+        </h1>
+        <form
+          class="form"
+          action="https://formspree.io/f/xnqoqzqz"
+          method="POST"
+        >
           <h1>Informações da Escola</h1>
           <label for="name">Nome da escola:</label>
           <input type="text" id="name" name="name" required />
@@ -109,6 +134,7 @@
           <label for="cargo">Cargo do Representante:</label>
           <input type="cargo" id="cargo" name="cargo" required />
           <button type="submit">Enviar</button>
+        </form>
       </section>
       <a href="" class="confiraButton">CONFIRA A PÁGINA DE CATÁLOGO!</a>
     </div>
