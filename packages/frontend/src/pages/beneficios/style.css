@@ -330,13 +330,6 @@
   color: black;
 }
 
-.imagens-retangulos {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  margin-top: 20px;
-}
-
 .imagem-container img {
   justify-self: end;
   display: flex;
@@ -361,6 +354,10 @@
     align-items: center;
   }
 
+  .post-it {
+    font-size: 18px;
+  }
+
   .retangulo-laranja {
     width: 90%;
     height: fit-content;
@@ -374,17 +371,23 @@
     grid-template-columns: repeat(1, 1fr);
     gap: 20px;
     margin-top: 50px;
+    width: 100%;
   }
 
   .carrosselComTexto {
     flex-direction: column-reverse;
     padding: 20px;
+    margin: 0px;
   }
 
   .card {
-    width: 80%;
+    min-width: 60%;
     height: fit-content;
     margin: 10px;
+    padding: 15px;
+  }
+  .card > p {
+    font-size: 20px;
   }
 
   .carrosselSlide {
@@ -399,7 +402,7 @@
 
   .texto_coloridos {
     flex-direction: column;
-    gap: 20px;
+    gap: 40px;
     padding: 10px;
     margin-top: 10px;
   }
@@ -420,17 +423,13 @@
     margin-left: auto;
     margin-right: auto;
   }
-
-  .imagens-retangulos {
-    flex-direction: column;
-    gap: 10px;
-  }
 }
 
 /* Responsividade para telas médias (md) */
 @media (min-width: 641px) and (max-width: 768px) {
   .container {
     padding: 20px;
+    gap: 40px;
   }
 
   .retangulo-laranja {
@@ -448,6 +447,11 @@
   .carrosselComTexto {
     flex-direction: column-reverse;
     padding: 50px;
+    margin: 0px;
+  }
+
+  .carousel-controls {
+    display: none;
   }
 
   .card {
@@ -456,8 +460,7 @@
   }
 
   .carrosselSlide {
-    width: 90%;
-    height: auto;
+    display: none;
   }
 
   .carrosselSlide img {
@@ -465,10 +468,17 @@
     height: auto;
   }
 
+  .retangulo {
+    width: 80%;
+    padding: 20px;
+    margin: 0px;
+  }
+
   .texto_coloridos {
     flex-direction: row;
     gap: 30px;
     padding: 20px;
+    margin-top: 0px;
   }
 
   .retangulo-amarelo,
@@ -476,12 +486,7 @@
   .retangulo-vermelho {
     width: 80%;
     padding: 20px;
-  }
-
-  .imagens-retangulos {
-    flex-direction: row;
-    gap: 15px;
-    flex-wrap: wrap;
+    margin-top: 0px;
   }
 }
 
@@ -496,6 +501,7 @@
 
 @media (max-width: 640px) {
   .footer {
+    margin-top: 0px;
     flex-direction: column;
     text-align: center;
     height: auto;
@@ -645,7 +651,7 @@ li > a:hover {
   display: none;
   flex-direction: column;
   cursor: pointer;
-  margin-right: 4%;
+  margin-right: 8%;
   z-index: 10;
 }
 

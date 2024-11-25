@@ -301,6 +301,11 @@ form > button:hover {
     width: 80%;
   }
 
+  form > h1 {
+    font-size: 28px;
+    text-align: center;
+  }
+
   form > label {
     font-size: 20px;
   }
@@ -491,7 +496,7 @@ li > a:hover {
   display: none;
   flex-direction: column;
   cursor: pointer;
-  margin-right: 4%;
+  margin-right: 8%;
   z-index: 10;
 }
 
