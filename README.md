@@ -1,9 +1,14 @@
 # Membros
 - Giovanna Lara RA: 24.01779-5
+  (fez página catálogo e doe)
 - Matheus da Cunha Castilho RA: 23.01178-5
+  (fez backend completo, admin e login)
 - Luisa Lério Leite RA: 24.01218-0
+  (fez a página benefícios e doe)
 - Tiago Tokugi de Albuquerque Massuda RA: 24.01217-3
+  (fez a página Como Funciona, navbar e rodapé)
 - Wilson Bittencourt RA: 23.01131-9
+  (fez a home page e admin)
 
 # Jogoteca Redesign
 
