@@ -111,7 +111,7 @@ window.onload = async function () {
         const textoField = document.getElementById('containerlaranja');
         textoField.value = texto;
     } catch (error) {
-        alert('Não foi alterar o texto.');
+        alert('Não foi possível alterar o texto.');
     }
 
     try {
@@ -119,7 +119,7 @@ window.onload = async function () {
         const textoField = document.getElementById('beneficiosjogoteca');
         textoField.value = texto;
     } catch (error) {
-        alert('Não foi alterar o texto.');
+        alert('Não foi possível alterar o texto.');
     }
 
     try {
@@ -127,7 +127,7 @@ window.onload = async function () {
         const textoField = document.getElementById('beneficiosbrinquedos');
         textoField.value = texto;
     } catch (error) {
-        alert('Não foi alterar o texto.');
+        alert('Não foi possível alterar o texto.');
     }
 
     try {
@@ -135,7 +135,7 @@ window.onload = async function () {
         const textoField = document.getElementById('beneficiosoficinas');
         textoField.value = texto;
     } catch (error) {
-        alert('Não foi alterar o texto.');
+        alert('Não foi possível alterar o texto.');
     }
 };
 
