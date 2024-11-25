@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel de Administração</title>
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+    <header class="header">
+        <nav class="nav">
+            <img src="../../assets/sol_logo.svg" alt="Random Image" style="margin-left: 20px;" />
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="overlay" id="overlay"></div>
+            <ul class="list" id="nav-list">
+                <li><a id="home" href="/">Home</a></li>
+                <li><a id="about" href="/about">Benefícios</a></li>
+                <li><a id="howWork" href="/contact">Como funciona</a></li>
+                <li>
+                    <a class="doe" id="donate" href="/doe">Doe<br />Agora</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <br></br>
+        <h1>Painel de Administração</h1>
+        <br />
+
+        <form id="form-email" action="#">
+            <div class="form-group">
+                <label for="email">Alterar E-mail Principal</label>
+                <input type="email" id="email" name="email" placeholder="Digite o novo e-mail principal" required>
+                <div class="button-container">
+                    <button type="submit" class="btn">Alterar E-mail</button>
+                </div>
+            </div>
+        </form>
+        <br />
+
+        <form action="#" method="POST">
+            <div class="form-group">
+                <label for="campo1">Texto 1</label>
+                <textarea id="campo1" name="campo1" placeholder="Digite o texto para o campo 1" required></textarea>
+                <div class="button-container">
+                    <button type="submit" class="btn">Alterar Texto 1</button>
+                </div>
+            </div>
+        </form>
+        <br />
+
+        <form action="#" method="POST">
+            <div class="form-group">
+                <label for="campo2">Texto 2</label>
+                <textarea id="campo2" name="campo2" placeholder="Digite o texto para o campo 2" required></textarea>
+                <div class="button-container">
+                    <button type="submit" class="btn">Alterar Texto 2</button>
+                </div>
+            </div>
+        </form>
+        <br />
+
+        <form action="#" id="form-containerlaranja">
+            <div class="form-group">
+                <label for="containerlaranja">Benefícios - Container Laranja</label>
+                <textarea id="containerlaranja" name="containerlaranja" placeholder="Digite o texto do conteiner laranja" required></textarea>
+                <div class="button-container">
+                    <button type="submit" class="btn">Alterar texto container laranja</button>
+                </div>
+            </div>
+        </form>
+        <br />
+
+        <form action="#" id="form-beneficiosjogoteca">
+            <div class="form-group">
+                <label for="beneficiosjogoteca">Benefícios - Jogoteca</label>
+                <textarea id="beneficiosjogoteca" name="beneficiosjogoteca" placeholder="Digite o texto do beneficios jogoteca" required></textarea>
+                <div class="button-container">
+                    <button type="submit" class="btn">Alterar texto beneficios jogoteca</button>
+                </div>
+            </div>
+        </form>
+        <br />
+
+        <form action="#" id="form-beneficiosbrinquedos">
+            <div class="form-group">
+                <label for="beneficiosbrinquedos">Benefícios - Brinquedos</label>
+                <textarea id="beneficiosbrinquedos" name="beneficiosbrinquedos" placeholder="Digite o texto do beneficios brinquedos" required></textarea>
+                <div class="button-container">
+                    <button type="submit" class="btn">Alterar texto beneficios brinquedos</button>
+                </div>
+            </div>
+        </form>
+        <br />
+
+        <form action="#" id="form-beneficiosoficinas">
+            <div class="form-group">
+                <label for="beneficiosoficinas">Benefícios - Oficinas</label>
+                <textarea id="beneficiosoficinas" name="beneficiosoficinas" placeholder="Digite o texto do beneficios oficinas" required></textarea>
+                <div class="button-container">
+                    <button type="submit" class="btn">Alterar texto beneficios oficinas</button>
+                </div>
+            </div>
+        </form>
+        <br />
+
+        <form action="#" method="POST">
+            <div class="form-group">
+                <label for="campo7">Texto 7</label>
+                <textarea id="campo7" name="campo7" placeholder="Digite o texto para o campo 7" required></textarea>
+                <div class="button-container">
+                    <button type="submit" class="btn">Alterar Texto 7</button>
+                </div>
+            </div>
+        </form>
+        <br />
+
+        <form action="#" method="POST">
+            <div class="form-group">
+                <label for="campo8">Texto 8</label>
+                <textarea id="campo8" name="campo8" placeholder="Digite o texto para o campo 8" required></textarea>
+                <div class="button-container">
+                    <button type="submit" class="btn">Alterar Texto 8</button>
+                </div>
+            </div>
+        </form>
+
+        <div class="image-container">
+            <img src="../../assets/sol_logo.svg" alt="logo passatempo">
+        </div>
+    </div>
+    <script src="./script.js" type="module"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</body>
+
+</html>
