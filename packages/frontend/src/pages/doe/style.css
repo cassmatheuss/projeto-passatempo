@@ -218,7 +218,7 @@ body{
 .blue-box {
   background-color:#6787e7ba;
   padding: 20px;
-  border-radius: 8px;
+  border-radius: 25px;
   margin-top: 150px;
   z-index: 1;
 }
@@ -240,12 +240,14 @@ body{
     font-size: 30px;
     font-family: "Ubuntu", sans-serif;
     margin-top: 10px;
+    font-weight: bold;
 }
 
 .transferencia-pix{
   font-size: 30px;
   font-family: "Ubuntu", sans-serif;
   justify-items:center;
+  margin-bottom: 25px;
 }
 
 .transferencia-pix-2 {
@@ -253,6 +255,7 @@ body{
   font-size: 30px;
   font-family: "Ubuntu", sans-serif;
   justify-items:center;
+  margin-bottom: 25px;
 }
 
 .dados{
