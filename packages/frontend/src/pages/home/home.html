@@ -1,20 +1,43 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Homepage - Jogoteca</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Luckiest+Guy&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
-    rel="stylesheet" />
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Luckiest+Guy&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const hamburger = document.getElementById("hamburger");
+        const navList = document.getElementById("nav-list");
+        const overlay = document.getElementById("overlay");
+
+        hamburger.addEventListener("click", () => {
+          navList.classList.toggle("active"); // Ativa/desativa o menu
+          overlay.classList.toggle("active"); // Ativa/desativa o overlay
+        });
+
+        // Fecha o menu se o usuário clicar no overlay
+        overlay.addEventListener("click", () => {
+          navList.classList.remove("active");
+          overlay.classList.remove("active");
+        });
+      });
+    </script>
     <header class="header">
       <nav class="nav">
-        <img src="assets/sol_logo.svg" alt="Random Image" />
+        <img
+          src="../../assets/sol_logo.svg"
+          class="sol_logo"
+          alt="Random Image"
+        />
         <div class="hamburger" id="hamburger">
           <span></span>
           <span></span>
@@ -22,39 +45,73 @@
         </div>
         <div class="overlay" id="overlay"></div>
         <ul class="list" id="nav-list">
-          <li><a id="selected home" href="/">Home</a></li>
-          <li><a id="benefits" href="/about">Benefícios</a></li>
-          <li><a id="howWork" href="/contact">Como funciona</a></li>
+          <li><a id="selected" href="../home/home.html">Home</a></li>
+          <li><a id="" href="../beneficios/index.html">Benefícios</a></li>
+          <li>
+            <a id="" href="../comoFunciona/index.html">Como funciona</a>
+          </li>
           <li>
             <a class="doe" id="donate" href="/doe">Doe<br />Agora</a>
           </li>
         </ul>
       </nav>
     </header>
+    <img
+      class="background"
+      src="../../assets/fundo.svg"
+      alt="Imagem de fundo branco"
+    />
     <div class="content">
-        <section class="jogoteca">
-            <div class="jogoteca-content">
-                <img src="assets/Imagem1PassatempoEducativo.svg" alt="Imagem Jogoteca" class="image">
-                <div class="text-bubble">
-                    <div class="h1">Jogoteca</div>
-                    <p> A Jogoteca de todos os tempos e culturas é uma grande aula de história, geografia, matemática e raciocínio lógico, com jogos de tabuleiros de diversos lugares do mundo, em que é possível levar a todos para uma viagem aos cinco continentes, possibilitando se conhecer mais sobre diferentes culturas. Possuímos um acervo com aproximadamente 180 jogos com origens em civilizações antigas e países dos cinco continentes. Os jogos apresentam temas variados e trabalham diversas habilidades como raciocínio, sorte, destreza, estratégia, entre outros. </p>
-                </div>
-            </div>
-        </section>
+      <section class="jogoteca">
+        <div class="jogoteca-content">
+          <img
+            src="assets/Imagem1PassatempoEducativo.svg"
+            alt="Imagem Jogoteca"
+            class="image"
+          />
+          <div class="text-bubble">
+            <div class="h1">Jogoteca</div>
+            <p>
+              A Jogoteca de todos os tempos e culturas é uma grande aula de
+              história, geografia, matemática e raciocínio lógico, com jogos de
+              tabuleiros de diversos lugares do mundo, em que é possível levar a
+              todos para uma viagem aos cinco continentes, possibilitando se
+              conhecer mais sobre diferentes culturas. Possuímos um acervo com
+              aproximadamente 180 jogos com origens em civilizações antigas e
+              países dos cinco continentes. Os jogos apresentam temas variados e
+              trabalham diversas habilidades como raciocínio, sorte, destreza,
+              estratégia, entre outros.
+            </p>
+          </div>
+        </div>
+      </section>
 
-        <section class="sobre-nos">
-            <div class="sobre-nos-content">
-                <img src="assets/Imagem2PassatempoEducativo.svg" alt="Imagem Sobre Nós" class="image">
-                <div class="text-bubble">
-                    <div class="h1">Sobre Nós</div>
-                    <p> Passatempo Educativo é uma organização não governamental, sem fins lucrativos, que desenvolve projetos na área educacional, cultural e de preservação ambiental. Reconhecida pelo Ministério da Justiça como OSCIP – Organização Social Civil de Interesse Público sob nº 08071005566.
- 
-                        Na área da educação, nossos projetos têm como objetivos dar continuidade no processo ensino-aprendizagem através de situações práticas com atividades nas escolas, excursões, visitas monitoradas, oficinas, workshops, palestras, jogos e gincanas dirigidos, suporte didático para pais e professores, além de elaboração de material pedagógico complementar.
-                        Leve esse projeto para os alunos da sua escola! 
-                        Conheça a Passatempo Educativo em detalhes clicando aqui. </p>
-                </div>
-            </div>
-        </section>
+      <section class="sobre-nos">
+        <div class="sobre-nos-content">
+          <img
+            src="assets/Imagem2PassatempoEducativo.svg"
+            alt="Imagem Sobre Nós"
+            class="image"
+          />
+          <div class="text-bubble">
+            <div class="h1">Sobre Nós</div>
+            <p>
+              Passatempo Educativo é uma organização não governamental, sem fins
+              lucrativos, que desenvolve projetos na área educacional, cultural
+              e de preservação ambiental. Reconhecida pelo Ministério da
+              Justiça como OSCIP – Organização Social Civil de Interesse Público
+              sob nº 08071005566.   Na área da educação, nossos projetos têm
+              como objetivos dar continuidade no processo ensino-aprendizagem
+              através de situações práticas com atividades nas escolas,
+              excursões, visitas monitoradas, oficinas, workshops, palestras,
+              jogos e gincanas dirigidos, suporte didático para pais e
+              professores, além de elaboração de material pedagógico
+              complementar. Leve esse projeto para os alunos da sua escola! 
+              Conheça a Passatempo Educativo em detalhes clicando aqui.
+            </p>
+          </div>
+        </div>
+      </section>
     </div>
     <footer class="footer">
       <div class="contatos">
@@ -64,20 +121,23 @@
       </div>
       <div class="redesSociais">
         <a
-          href="https://www.instagram.com/passatempoeducativo?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
-          <img src="../../assets/instagram.svg" alt="Instagram">
+          href="https://www.instagram.com/passatempoeducativo?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+        >
+          <img src="../../assets/instagram.svg" alt="Instagram" />
         </a>
         <a
-          href="https://api.whatsapp.com/send?phone=%2B5511997579540&context=ARBRH1oy_mexh6YlxI6vVK9R1vvls9ToyIackxwr4hG1hGIp2EFCAT17aA6CyhYiGjjpDrby06vTioh2hsUiC_l7LoG0uSTeA4qWhvFF36cj0ajs6qcBJ2Pn_dQ6iwl_LDtLGQn8mp1tZ_g76eCO9155Ug&source=FB_Page&app=facebook&entry_point=page_cta&fbclid=IwY2xjawGhhN9leHRuA2FlbQIxMAABHZl8PCazS7U03JvPtXwX5R6HRgC1u_SM_6_gdm4yv2QY-RuHgu65APnmnw_aem_y2CYjn8BgHOAzoMem4HEaw">
-          <img src="../../assets/whatsapp.svg" alt="Whatsapp">
+          href="https://api.whatsapp.com/send?phone=%2B5511997579540&context=ARBRH1oy_mexh6YlxI6vVK9R1vvls9ToyIackxwr4hG1hGIp2EFCAT17aA6CyhYiGjjpDrby06vTioh2hsUiC_l7LoG0uSTeA4qWhvFF36cj0ajs6qcBJ2Pn_dQ6iwl_LDtLGQn8mp1tZ_g76eCO9155Ug&source=FB_Page&app=facebook&entry_point=page_cta&fbclid=IwY2xjawGhhN9leHRuA2FlbQIxMAABHZl8PCazS7U03JvPtXwX5R6HRgC1u_SM_6_gdm4yv2QY-RuHgu65APnmnw_aem_y2CYjn8BgHOAzoMem4HEaw"
+        >
+          <img src="../../assets/whatsapp.svg" alt="Whatsapp" />
         </a>
-  
-        <a href="https://www.facebook.com/Passatempoedu/?locale=pt_BR" target="_blank">
-          <img src="../../assets/facebook.svg" alt="Facebook">
+
+        <a
+          href="https://www.facebook.com/Passatempoedu/?locale=pt_BR"
+          target="_blank"
+        >
+          <img src="../../assets/facebook.svg" alt="Facebook" />
         </a>
-  
       </div>
     </footer>
-
   </body>
 </html>
