@@ -294,23 +294,23 @@ form > button:hover {
   }
 
   .imgIndio {
-    width: 90%; 
+    width: 90%;
   }
 
   .fundoIndio {
-    width: 80%; 
+    width: 80%;
   }
 
   form > label {
-    font-size: 20px; 
+    font-size: 20px;
   }
 
   form > input {
-    font-size: 18px; 
+    font-size: 18px;
   }
 
   form > button {
-    width: 60%; 
+    width: 60%;
     font-size: 18px;
   }
 
@@ -320,9 +320,9 @@ form > button:hover {
   }
 
   .footer {
-    flex-direction: column; 
+    flex-direction: column;
     text-align: center;
-    height: auto; 
+    height: auto;
     padding: 20px;
   }
 }
@@ -330,27 +330,27 @@ form > button:hover {
 /* Estilos para telas médias (md) - Entre 641px e 768px */
 @media (min-width: 641px) and (max-width: 768px) {
   .linha {
-    flex-direction: column; 
+    flex-direction: column;
     gap: 30px;
   }
 
   .textBubbleOrange,
   .textBubbleBlue {
-    width: 70%; 
+    width: 70%;
     font-size: 18px;
     padding: 20px;
   }
 
   .titulos {
-    font-size: 36px; 
+    font-size: 36px;
   }
 
   .conteudo {
-    font-size: 18px; 
+    font-size: 18px;
   }
 
   .imgBubble {
-    width: 60%; 
+    width: 60%;
   }
 
   .imgIndio {
@@ -362,11 +362,11 @@ form > button:hover {
   }
 
   form > label {
-    font-size: 22px; 
+    font-size: 22px;
   }
 
   form > input {
-    font-size: 20px; 
+    font-size: 20px;
   }
 
   form > button {
@@ -380,9 +380,9 @@ form > button:hover {
   }
 
   .footer {
-    flex-direction: column; 
+    flex-direction: column;
     text-align: center;
-    height: auto; 
+    height: auto;
     padding: 20px;
   }
 }
@@ -478,12 +478,11 @@ form > button:hover {
 
 li > a {
   text-decoration: none;
-  color: white;
-  text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.5);
+  color: black;
 }
 
 li > a:hover {
-  color: #f1f1f1;
+  color: rgb(61, 61, 61);
   text-decoration: underline;
   text-underline-offset: 5px;
 }
