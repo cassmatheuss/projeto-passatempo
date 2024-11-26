@@ -34,6 +34,7 @@ document.getElementById('loginForm').addEventListener('submit', async (event) =>
         setCookie('jwt_token', token);
         
         alert('Login bem-sucedido!');
+        window.location.href = '../admin/index.html';
     } catch (error) {
         alert('Erro ao fazer login, verifique seus dados!');
     }
