@@ -30,8 +30,8 @@ async function AtualizarTextoHomeJogoteca() {
 
 async function AtualizarTextoHomeSobreNos() {
   try {
-    const texto = await getTexto('homejogoteca');
-    atualizarTexto(texto, '.texto-jogoteca');
+    const texto = await getTexto('sobrenosjogoteca');
+    atualizarTexto(texto, '.texto-sobrenos');
   } catch (error) {
     console.error("Erro ao atualizar o texto: ", error);
   }
