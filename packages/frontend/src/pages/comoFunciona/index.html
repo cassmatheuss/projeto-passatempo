@@ -11,6 +11,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Luckiest+Guy&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
       rel="stylesheet"
     />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   </head>
   <body>
     <script>
@@ -65,14 +66,14 @@
       <section class="linha">
         <div class="textBubbleOrange">
           <h1 class="titulos">Oficinas</h1>
-          <p class="conteudo">
-            Uma série  de oficinas e workshops ligados a temas culturais, que
-            incentivem a criatividade dos participantes como construção de
-            brinquedos com sucata, contação de histórias e rodas cantadas. Cada
-            mês temos uma temática diferente que é direcionada ao público
-            infanto-juvenil. O horário e dia das oficinas é acertado da escola e
-            pode ser feito um treinamento para que os educadores apliquem os
-            jogos com suas respectivas turmas.
+          <p class="conteudo" id="texto-oficinacf">
+              Uma série  de oficinas e workshops ligados a temas culturais, que
+              incentivem a criatividade dos participantes como construção de
+              brinquedos com sucata, contação de histórias e rodas cantadas. Cada
+              mês temos uma temática diferente que é direcionada ao público
+              infanto-juvenil. O horário e dia das oficinas é acertado da escola e
+              pode ser feito um treinamento para que os educadores apliquem os
+              jogos com suas respectivas turmas.
           </p>
         </div>
         <img
@@ -82,7 +83,7 @@
         />
       </section>
       <section class="linha indio">
-        <ul class="textBubbleBlue">
+        <ul class="textBubbleBlue" id="texto-containerazulcf">
           <li>
             1° Passo: Apresentação do projeto para professores da instituição;
           </li>
@@ -113,32 +114,27 @@
       </section>
       <section class="formulario">
         <h1 class="tituloForm">
-          Abaixo, você encontrará um formulário de inscrição para que as escolas
-          possam se inscrever no projeto e entrarem em contato:
+          Preencha o formulário abaixo para que as escolas possam se inscrever no projeto:
         </h1>
-        <form
-          class="form"
-          action="https://formspree.io/f/xnqoqzqz"
-          method="POST"
-        >
+        <form id="formulario">
           <h1>Informações da Escola</h1>
-          <label for="name">Nome da escola:</label>
-          <input type="text" id="name" name="name" required />
-          <label for="email">E-mail:</label>
-          <input type="email" id="email" name="email" required />
-          <label for="phone">Telefone:</label>
-          <input type="tel" id="phone" name="phone" required />
-          <label for="city">Endereço:</label>
-          <input type="text" id="city" name="city" required />
+          <label for="nome_escola">Nome da escola:</label>
+          <input type="text" id="nome_escola" name="nome_escola" required />
+          <label for="email_escola">E-mail da escola:</label>
+          <input type="email" id="email_escola" name="email_escola" required />
+          <label for="telefone_escola">Telefone da escola:</label>
+          <input type="tel" id="telefone_escola" name="telefone_escola" required />
+          <label for="endereco">Endereço:</label>
+          <input type="text" id="endereco" name="endereco" required />
           <h1>Informações do Representante</h1>
-          <label for="name">Nome do Representante:</label>
-          <input type="text" id="name" name="name" required />
-          <label for="email">E-mail do Representante:</label>
-          <input type="email" id="email" name="email" required />
-          <label for="phone">Telefone de contato do Representante:</label>
-          <input type="tel" id="phone" name="phone" required />
-          <label for="cargo">Cargo do Representante:</label>
-          <input type="cargo" id="cargo" name="cargo" required />
+          <label for="nome_representante">Nome do Representante:</label>
+          <input type="text" id="nome_representante" name="nome_representante" required />
+          <label for="email_representante">E-mail do Representante:</label>
+          <input type="email" id="email_representante" name="email_representante" required />
+          <label for="telefone_representante">Telefone do Representante:</label>
+          <input type="tel" id="telefone_representante" name="telefone_representante" required />
+          <label for="cargo_representante">Cargo do Representante:</label>
+          <input type="text" id="cargo_representante" name="cargo_representante" required />
           <button type="submit">Enviar</button>
         </form>
       </section>
@@ -171,5 +167,7 @@
         </a>
       </div>
     </footer>
+    <script src="./script.js"></script>
+    <script src="./formulario.js"></script>
   </body>
 </html>

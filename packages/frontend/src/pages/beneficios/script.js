@@ -31,7 +31,7 @@ async function AtualizarTextoBeneficiosLaranja() {
 async function AtualizarTextoBeneficiosJogoteca() {
   try {
     const texto = await getTexto('beneficiosjogoteca');
-    atualizarTexto(texto, '.retangulo-amarelo .jogoteca .texto-jogoteca');
+    atualizarTexto(texto, '.retangulo-amarelo .jogoteca .texto-jogoteca p');
   } catch (error) {
     console.error("Erro ao atualizar o texto: ", error);
   }
@@ -40,7 +40,7 @@ async function AtualizarTextoBeneficiosJogoteca() {
 async function AtualizarTextoBeneficiosBrinquedos() {
   try {
     const texto = await getTexto('beneficiosbrinquedos');
-    atualizarTexto(texto, '.retangulo-azul .brinquedos .texto-brinquedos');
+    atualizarTexto(texto, '.retangulo-azul .brinquedos .texto-brinquedos p');
   } catch (error) {
     console.error("Erro ao atualizar o texto: ", error);
   }
@@ -49,12 +49,13 @@ async function AtualizarTextoBeneficiosBrinquedos() {
 async function AtualizarTextoBeneficiosOficinas() {
   try {
     const texto = await getTexto('beneficiosoficinas');
-    atualizarTexto(texto, '.retangulo-vermelho .oficinas .texto-oficinas');
+    atualizarTexto(texto, '.retangulo-vermelho .oficinas .texto-oficinas p');
   } catch (error) {
     console.error("Erro ao atualizar o texto: ", error);
   }
 }
 
 AtualizarTextoBeneficiosLaranja()
+AtualizarTextoBeneficiosJogoteca()  
 AtualizarTextoBeneficiosBrinquedos()
 AtualizarTextoBeneficiosOficinas()

@@ -107,6 +107,22 @@ window.onload = async function () {
     }
 
     try {
+        const texto = await getTexto('homejogoteca');
+        const textoField = document.getElementById('homejogoteca');
+        textoField.value = texto;
+    } catch (error) {
+        alert('Não foi possível alterar o texto.');
+    }
+
+    try {
+        const texto = await getTexto('sobrenosjogoteca');
+        const textoField = document.getElementById('sobrenosjogoteca');
+        textoField.value = texto;
+    } catch (error) {
+        alert('Não foi possível alterar o texto.');
+    }
+
+    try {
         const texto = await getTexto('beneficioslaranja');
         const textoField = document.getElementById('containerlaranja');
         textoField.value = texto;
@@ -133,6 +149,22 @@ window.onload = async function () {
     try {
         const texto = await getTexto('beneficiosoficinas');
         const textoField = document.getElementById('beneficiosoficinas');
+        textoField.value = texto;
+    } catch (error) {
+        alert('Não foi possível alterar o texto.');
+    }
+
+    try {
+        const texto = await getTexto('oficinacf');
+        const textoField = document.getElementById('oficinacf');
+        textoField.value = texto;
+    } catch (error) {
+        alert('Não foi possível alterar o texto.');
+    }
+
+    try {
+        const texto = await getTexto('containerazulcf');
+        const textoField = document.getElementById('containerazulcf');
         textoField.value = texto;
     } catch (error) {
         alert('Não foi possível alterar o texto.');
@@ -171,6 +203,48 @@ const setTexto = async (id, texto) => {
         throw error;
     }
   };
+
+document.getElementById('form-homejogoteca').addEventListener('submit', async function (event) {
+    event.preventDefault();
+
+    const texto = document.getElementById('homejogoteca');
+    const textoValue = texto.value;
+
+    console.log('Formulário enviado');
+
+    if (!textoValue) {
+        alert('Por favor, insira um texto válido.');
+        return;
+    }
+
+    try {
+        await setTexto('homejogoteca', textoValue);
+        alert('Texto alterado.'); 
+    } catch (error) {
+        alert('Não foi possível alterar o texto.');
+    }
+});  
+
+document.getElementById('form-sobrenosjogoteca').addEventListener('submit', async function (event) {
+    event.preventDefault();
+
+    const texto = document.getElementById('sobrenosjogoteca');
+    const textoValue = texto.value;
+
+    console.log('Formulário enviado');
+
+    if (!textoValue) {
+        alert('Por favor, insira um texto válido.');
+        return;
+    }
+
+    try {
+        await setTexto('sobrenosjogoteca', textoValue);
+        alert('Texto alterado.'); 
+    } catch (error) {
+        alert('Não foi possível alterar o texto.');
+    }
+});  
 
 document.getElementById('form-containerlaranja').addEventListener('submit', async function (event) {
     event.preventDefault();
@@ -250,6 +324,48 @@ document.getElementById('form-beneficiosoficinas').addEventListener('submit', as
 
     try {
         await setTexto('beneficiosoficinas', textoValue);
+        alert('Texto alterado.'); 
+    } catch (error) {
+        alert('Não foi possível alterar o texto.');
+    }
+});
+
+document.getElementById('form-oficinacf').addEventListener('submit', async function (event) {
+    event.preventDefault();
+
+    const texto = document.getElementById('oficinacf');
+    const textoValue = texto.value;
+
+    console.log('Formulário enviado');
+
+    if (!textoValue) {
+        alert('Por favor, insira um texto válido.');
+        return;
+    }
+
+    try {
+        await setTexto('oficinacf', textoValue);
+        alert('Texto alterado.'); 
+    } catch (error) {
+        alert('Não foi possível alterar o texto.');
+    }
+});
+
+document.getElementById('form-containerazulcf').addEventListener('submit', async function (event) {
+    event.preventDefault();
+
+    const texto = document.getElementById('containerazulcf');
+    const textoValue = texto.value;
+
+    console.log('Formulário enviado');
+
+    if (!textoValue) {
+        alert('Por favor, insira um texto válido.');
+        return;
+    }
+
+    try {
+        await setTexto('containerazulcf', textoValue);
         alert('Texto alterado.'); 
     } catch (error) {
         alert('Não foi possível alterar o texto.');
