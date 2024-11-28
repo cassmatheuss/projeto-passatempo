@@ -34,11 +34,7 @@
     </script>
     <header class="header">
       <nav class="nav">
-        <img
-          src="../../assets/sol_logo.svg"
-          class="sol_logo"
-          alt="Random Image"
-        />
+        <img src="../../assets/sol_logo.svg" alt="Random Image" />
         <div class="hamburger" id="hamburger">
           <span></span>
           <span></span>
@@ -47,12 +43,14 @@
         <div class="overlay" id="overlay"></div>
         <ul class="list" id="nav-list">
           <li><a id="home" href="../home/home.html">Home</a></li>
-          <li><a id="" href="../beneficios/index.html">Benefícios</a></li>
+          <li>
+            <a id="beneficios" href="../beneficios/index.html">Benefícios</a>
+          </li>
           <li>
             <a id="selected" href="../comoFunciona/index.html">Como funciona</a>
           </li>
           <li>
-            <a class="doe" id="donate" href="/doe">Doe<br />Agora</a>
+            <a class="doe" id="donate" href="../doe/Doe.html">Doe<br />Agora</a>
           </li>
         </ul>
       </nav>
@@ -140,6 +138,16 @@
       </section>
       <a href="" class="confiraButton">CONFIRA A PÁGINA DE CATÁLOGO!</a>
     </div>
+    <div vw class="enabled">
+      <div vw-access-button class="active"></div>
+      <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+      </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+      new window.VLibras.Widget("https://vlibras.gov.br/app");
+    </script>
     <!-- footer -->
     <footer class="footer">
       <div class="contatos">
@@ -156,14 +164,14 @@
         <a
           href="https://api.whatsapp.com/send?phone=%2B5511997579540&context=ARBRH1oy_mexh6YlxI6vVK9R1vvls9ToyIackxwr4hG1hGIp2EFCAT17aA6CyhYiGjjpDrby06vTioh2hsUiC_l7LoG0uSTeA4qWhvFF36cj0ajs6qcBJ2Pn_dQ6iwl_LDtLGQn8mp1tZ_g76eCO9155Ug&source=FB_Page&app=facebook&entry_point=page_cta&fbclid=IwY2xjawGhhN9leHRuA2FlbQIxMAABHZl8PCazS7U03JvPtXwX5R6HRgC1u_SM_6_gdm4yv2QY-RuHgu65APnmnw_aem_y2CYjn8BgHOAzoMem4HEaw"
         >
-          <img src="../../assets" alt="Whatsapp" />
+          <img src="../../assets/whatsapp-svgrepo-com 1.svg" alt="Whatsapp" />
         </a>
 
         <a
           href="https://www.facebook.com/Passatempoedu/?locale=pt_BR"
           target="_blank"
         >
-          <img src="../../assets//SVGRepo_iconCarrier.svg" alt="Facebook" />
+          <img src="../../assets/SVGRepo_iconCarrier.svg" alt="Facebook" />
         </a>
       </div>
     </footer>
