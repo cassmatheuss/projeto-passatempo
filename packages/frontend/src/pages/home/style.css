@@ -313,7 +313,7 @@ body {
 @media (max-width: 768px) {
   .jogoteca-content,
   .sobre-nos-content {
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-items: center;
     gap: 30px;
   }

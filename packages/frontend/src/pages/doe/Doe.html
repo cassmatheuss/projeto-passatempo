@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
@@ -8,10 +8,6 @@
       href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
       rel="stylesheet"
     />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
     <link rel="stylesheet" href="styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -19,9 +15,26 @@
       href="https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Grandiflora+One&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
       rel="stylesheet"
     />
-    <link href="style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./style.css">
   </head>
   <body>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const hamburger = document.getElementById("hamburger");
+        const navList = document.getElementById("nav-list");
+        const overlay = document.getElementById("overlay");
+
+        hamburger.addEventListener("click", () => {
+          navList.classList.toggle("active"); // Ativa/desativa o menu
+          overlay.classList.toggle("active"); // Ativa/desativa o overlay
+        });
+
+        overlay.addEventListener("click", () => {
+          navList.classList.remove("active");
+          overlay.classList.remove("active");
+        });
+      });
+    </script>
     <header class="header">
       <nav class="nav">
         <img src="../../assets/sol_logo.svg" alt="Random Image" />
@@ -37,7 +50,7 @@
             <a id="beneficios" href="../beneficios/index.html">Benefícios</a>
           </li>
           <li>
-            <a id="howWork" href="../comoFunciona/index.html">Como funciona</a>
+            <a id="" href="../comoFunciona/index.html">Como funciona</a>
           </li>
           <li>
             <a class="doe" id="selected" href="../doe/Doe.html">Doe<br />Agora</a>
@@ -45,16 +58,20 @@
         </ul>
       </nav>
     </header>
-    <script src="carrossel.js"></script>
+    <img
+      class="background"
+      src="../../assets/fundo.svg"
+      alt="Imagem de fundo branco"
+    />
 
-    <div class="container mt-5">
+    <div class="container">
       <div class="blue-box text-center">
         <h5 class="titulo">
           Venha colaborar com nosso projeto jogoteca e aumentar nossa
           visibilidade.
         </h5>
-        <div class="row mt-4">
-          <div class="col-md-6">
+        <div class="row">
+          <div class="column">
             <div class="yellow-box">
               <h6 class="transferencia-pix">Transferência bancária</h6>
               <div class="dados">
@@ -66,7 +83,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-6">
+          <div class="column">
             <div class="yellow-box">
               <h6 class="transferencia-pix-2">Chave PIX</h6>
               <div class="dados-2">
@@ -76,9 +93,9 @@
             </div>
           </div>
         </div>
-        <div class="content-box mt-4">
+        <div class="content-box">
           <p class="titulo">O seu apoio será transformado em:</p>
-          <ul class="text-start">
+          <ul>
             <li>
               Compra de novos livros para reposição de exemplares do Projeto
               Livros em Ação;
@@ -96,16 +113,6 @@
         </div>
       </div>
     </div>
-    <div vw class="enabled">
-      <div vw-access-button class="active"></div>
-      <div vw-plugin-wrapper>
-        <div class="vw-plugin-top-wrapper"></div>
-      </div>
-    </div>
-    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-    <script>
-      new window.VLibras.Widget("https://vlibras.gov.br/app");
-    </script>
     <footer class="footer">
       <div class="contatos">
         <h1>Contatos</h1>
@@ -114,16 +121,15 @@
       </div>
       <div class="redesSociais">
         <a
-          href="https://www.instagram.com/passatempoeducativo?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+          href="https://www.instagram.com/passatempoeducativo"
         >
           <img src="../../assets/Frame.svg" alt="Instagram" />
         </a>
         <a
-          href="https://api.whatsapp.com/send?phone=%2B5511997579540&context=ARBRH1oy_mexh6YlxI6vVK9R1vvls9ToyIackxwr4hG1hGIp2EFCAT17aA6CyhYiGjjpDrby06vTioh2hsUiC_l7LoG0uSTeA4qWhvFF36cj0ajs6qcBJ2Pn_dQ6iwl_LDtLGQn8mp1tZ_g76eCO9155Ug&source=FB_Page&app=facebook&entry_point=page_cta&fbclid=IwY2xjawGhhN9leHRuA2FlbQIxMAABHZl8PCazS7U03JvPtXwX5R6HRgC1u_SM_6_gdm4yv2QY-RuHgu65APnmnw_aem_y2CYjn8BgHOAzoMem4HEaw"
+          href="https://api.whatsapp.com/send?phone=%2B5511997579540"
         >
           <img src="../../assets/whatsapp-svgrepo-com 1.svg" alt="Whatsapp" />
         </a>
-
         <a
           href="https://www.facebook.com/Passatempoedu/?locale=pt_BR"
           target="_blank"
@@ -132,7 +138,5 @@
         </a>
       </div>
     </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
