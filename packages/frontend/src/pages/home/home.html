@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
@@ -10,6 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Luckiest+Guy&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
       rel="stylesheet"
     />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -33,11 +34,7 @@
     </script>
     <header class="header">
       <nav class="nav">
-        <img
-          src="../../assets/sol_logo.svg"
-          class="sol_logo"
-          alt="Random Image"
-        />
+        <img src="../../assets/sol_logo.svg" alt="Random Image" />
         <div class="hamburger" id="hamburger">
           <span></span>
           <span></span>
@@ -46,12 +43,14 @@
         <div class="overlay" id="overlay"></div>
         <ul class="list" id="nav-list">
           <li><a id="selected" href="../home/home.html">Home</a></li>
-          <li><a id="" href="../beneficios/index.html">Benefícios</a></li>
           <li>
-            <a id="" href="../comoFunciona/index.html">Como funciona</a>
+            <a id="beneficios" href="../beneficios/index.html">Benefícios</a>
           </li>
           <li>
-            <a class="doe" id="donate" href="/doe">Doe<br />Agora</a>
+            <a id="howWork" href="../comoFunciona/index.html">Como funciona</a>
+          </li>
+          <li>
+            <a class="doe" id="donate" href="../doe/Doe.html">Doe<br />Agora</a>
           </li>
         </ul>
       </nav>
@@ -71,7 +70,7 @@
           />
           <div class="text-bubble">
             <div class="h1">Jogoteca</div>
-            <p>
+            <p class="texto-jogoteca">
               A Jogoteca de todos os tempos e culturas é uma grande aula de
               história, geografia, matemática e raciocínio lógico, com jogos de
               tabuleiros de diversos lugares do mundo, em que é possível levar a
@@ -95,7 +94,7 @@
           />
           <div class="text-bubble">
             <div class="h1">Sobre Nós</div>
-            <p>
+            <p class="texto-sobrenos">
               Passatempo Educativo é uma organização não governamental, sem fins
               lucrativos, que desenvolve projetos na área educacional, cultural
               e de preservação ambiental. Reconhecida pelo Ministério da
@@ -113,6 +112,16 @@
         </div>
       </section>
     </div>
+    <div vw class="enabled">
+      <div vw-access-button class="active"></div>
+      <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+      </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+      new window.VLibras.Widget("https://vlibras.gov.br/app");
+    </script>
     <footer class="footer">
       <div class="contatos">
         <h1>Contatos</h1>
@@ -123,21 +132,22 @@
         <a
           href="https://www.instagram.com/passatempoeducativo?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
         >
-          <img src="../../assets/instagram.svg" alt="Instagram" />
+          <img src="../../assets/Frame.svg" alt="Instagram" />
         </a>
         <a
           href="https://api.whatsapp.com/send?phone=%2B5511997579540&context=ARBRH1oy_mexh6YlxI6vVK9R1vvls9ToyIackxwr4hG1hGIp2EFCAT17aA6CyhYiGjjpDrby06vTioh2hsUiC_l7LoG0uSTeA4qWhvFF36cj0ajs6qcBJ2Pn_dQ6iwl_LDtLGQn8mp1tZ_g76eCO9155Ug&source=FB_Page&app=facebook&entry_point=page_cta&fbclid=IwY2xjawGhhN9leHRuA2FlbQIxMAABHZl8PCazS7U03JvPtXwX5R6HRgC1u_SM_6_gdm4yv2QY-RuHgu65APnmnw_aem_y2CYjn8BgHOAzoMem4HEaw"
         >
-          <img src="../../assets/whatsapp.svg" alt="Whatsapp" />
+          <img src="../../assets/whatsapp-svgrepo-com 1.svg" alt="Whatsapp" />
         </a>
 
         <a
           href="https://www.facebook.com/Passatempoedu/?locale=pt_BR"
           target="_blank"
         >
-          <img src="../../assets/facebook.svg" alt="Facebook" />
+          <img src="../../assets/SVGRepo_iconCarrier.svg" alt="Facebook" />
         </a>
       </div>
     </footer>
+    <script src="./script.js"></script>
   </body>
 </html>
