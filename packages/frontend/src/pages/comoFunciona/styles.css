@@ -325,7 +325,9 @@ form > button:hover {
   }
 
   .footer {
+    margin-top: 70px;
     flex-direction: column;
+    gap: 20px;
     text-align: center;
     height: auto;
     padding: 20px;
@@ -386,6 +388,7 @@ form > button:hover {
 
   .footer {
     flex-direction: column;
+    gap: 20px;
     text-align: center;
     height: auto;
     padding: 20px;

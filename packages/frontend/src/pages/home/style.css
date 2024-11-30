@@ -317,6 +317,18 @@ body {
     align-items: center;
     gap: 30px;
   }
+  .jogoteca {
+    margin-bottom: 0px;
+    padding: 40px 20px 0px 20px;
+    text-align: center;
+    position: relative;
+  }
+  .sobre-nos {
+    margin-bottom: 0px;
+    padding: 0px 20px;
+    text-align: center;
+    position: relative;
+  }
 }
 
 .footer {
@@ -360,6 +372,7 @@ body {
 @media (min-width: 641px) and (max-width: 768px) {
   .footer {
     flex-direction: column;
+    gap: 20px;
     text-align: center;
     height: auto;
     padding: 20px;
@@ -368,6 +381,8 @@ body {
 
 @media (max-width: 640px) {
   .footer {
+    margin-top: 60px;
+    gap: 20px;
     flex-direction: column;
     text-align: center;
     height: auto;
