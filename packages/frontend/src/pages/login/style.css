@@ -63,7 +63,7 @@ h2 {
     outline: none;
 }
 
-input[type="submit"] {
+.button {
     width: 100%;
     padding: 15px;
     background: linear-gradient(135deg, rgba(6, 35, 74, 0.8), rgba(8, 69, 148, 0.8));
@@ -73,11 +73,11 @@ input[type="submit"] {
     font-weight: bold;
     cursor: pointer;
     color: #fff;
-    transition: background 0.3s ease, transform 0.2s ease;
+    transition: filter 0.3s ease, transform 0.3s ease;
 }
 
-input[type="submit"]:hover {
-    background: linear-gradient(135deg, rgba(8, 69, 148, 0.9), rgba(6, 35, 74, 0.9));
+.button:hover {
+    filter: brightness(2);
     transform: translateY(-3px);
 }
 
