@@ -218,14 +218,14 @@ li > a:hover {
 .descricao {
   font-family: "Ubuntu", sans-serif;
   background-color: #6787e7ba;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); 
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   padding: 50px;
   backdrop-filter: blur(10px);
   width: 80%;
   margin: 160px auto 200px auto;
   text-align: center;
   color: black;
-  border-radius: 27px;
+  border-radius: 15px;
   font-size: 25px;
 }
 
@@ -250,7 +250,7 @@ li > a:hover {
   left: 0;
   width: 100vw;
   height: 60%;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); 
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   background-color: #6787e7ba;
   backdrop-filter: blur(10px);
   z-index: -1;
@@ -275,7 +275,7 @@ li > a:hover {
   max-width: 60%;
   margin: 0 auto;
   background-color: transparent;
-  border-radius: 10px;
+  border-radius: 15px;
 }
 
 .texto {
@@ -294,7 +294,7 @@ li > a:hover {
 }
 
 @media (max-width: 768px) {
-  .descricao{
+  .descricao {
     margin: 150px auto 0 auto;
     width: 90%;
   }
