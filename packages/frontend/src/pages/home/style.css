@@ -285,7 +285,7 @@ body {
 
 .text-bubble {
   background-color: rgba(103, 135, 231, 0.5);
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); 
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   color: #333;
   padding: 15px;
   border-radius: 15px;
@@ -296,11 +296,11 @@ body {
 }
 
 .image {
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); 
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   width: 450px;
   height: 450px;
   object-fit: cover;
-  border-radius: 0.5em;
+  border-radius: 15px;
 }
 
 .text-bubble p,
@@ -318,16 +318,36 @@ body {
 }
 
 @media (max-width: 768px) {
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+  }
+
   .jogoteca-content,
   .sobre-nos-content {
     flex-direction: column-reverse;
     align-items: center;
     gap: 30px;
   }
+
+  .text-bubble {
+    width: 90%;
+  }
+
+  .image {
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 15px;
+  }
+
   .jogoteca {
     margin-bottom: 0px;
     padding: 40px 20px 0px 20px;
     text-align: center;
+    gap: 30px;
     position: relative;
   }
   .sobre-nos {
