@@ -228,12 +228,17 @@ body {
 .h1 {
   font-family: "Ubuntu", sans-serif;
   font-weight: bold;
-  font-size: 24px;
-  text-align: center;
+  font-size: 40px;
+  text-align: start;
   color: #000000;
   z-index: 10;
   position: relative;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+}
+
+.texto-jogoteca,
+.texto-sobrenos {
+  text-align: justify;
 }
 
 .h2 {
@@ -306,7 +311,7 @@ body {
 .text-bubble p,
 .text-bubble h2 {
   margin: 0;
-  font-size: 16px;
+  font-size: 20px;
   line-height: 1.6;
 }
 

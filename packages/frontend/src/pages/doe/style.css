@@ -323,6 +323,10 @@ li > a:hover {
   width: 70%;
 }
 
+ul > li {
+  margin-bottom: 20px;
+}
+
 @media (max-width: 1024px) {
   .row {
     flex-direction: column;
