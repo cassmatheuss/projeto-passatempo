@@ -2,10 +2,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font: 'Ubuntu';
+  font: "Ubuntu";
 }
 
-body, html {
+body,
+html {
   margin: 0;
   padding: 0;
 }
@@ -45,6 +46,34 @@ textarea {
 
 textarea {
   height: 150px;
+}
+
+.explanation {
+  background: #f7f7f7;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.explanation h3 {
+  margin-top: 0;
+}
+.explanation ul {
+  padding-left: 20px;
+  margin: 10px 0;
+}
+.explanation li {
+  margin-bottom: 10px;
+}
+.explanation ol {
+  padding-left: 20px;
+  margin: 10px 0;
+}
+code {
+  background-color: #dad9d9;
+  padding: 2px 5px;
+  border-radius: 4px;
 }
 
 .button-container {
