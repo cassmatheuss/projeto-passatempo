@@ -1,149 +1,208 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="../../assets/sol_logo.svg">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="../../assets/sol_logo.svg" />
     <title>Painel de Administração</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style.css" />
+  </head>
 
-</head>
-
-<body>
+  <body>
     <header class="header">
-        <nav class="nav">
-          <img src="../../assets/sol_logo.svg" alt="Random Image" />
-          <div class="hamburger" id="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-          <div class="overlay" id="overlay"></div>
-          <ul class="list" id="nav-list">
-            <li><a id="home" href="../home/home.html">Home</a></li>
-            <li>
-              <a id="selected" href="../beneficios/index.html">Benefícios</a>
-            </li>
-            <li>
-              <a id="howWork" href="../comoFunciona/index.html">Como funciona</a>
-            </li>
-            <li>
-              <a class="doe" id="donate" href="../doe/Doe.html">Doe<br />Agora</a>
-            </li>
-          </ul>
-        </nav>
-      </header>
+      <nav class="nav">
+        <img src="../../assets/sol_logo.svg" alt="Random Image" />
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="overlay" id="overlay"></div>
+        <ul class="list" id="nav-list">
+          <li><a id="home" href="../home/home.html">Home</a></li>
+          <li>
+            <a id="" href="../beneficios/index.html">Benefícios</a>
+          </li>
+          <li>
+            <a id="howWork" href="../comoFunciona/index.html">Como funciona</a>
+          </li>
+          <li>
+            <a class="doe" id="donate" href="../doe/Doe.html">Doe<br />Agora</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
 
     <div class="container">
-        <br></br>
-        <h1>Painel de Administração</h1>
-        <br />
+      <br />
+      <h1>Painel de Administração</h1>
+      <br />
 
-        <form id="form-email" action="#">
-            <div class="form-group">
-                <label for="email">Alterar E-mail Principal</label>
-                <input type="email" id="email" name="email" placeholder="Digite o novo e-mail principal" required>
-                <div class="button-container">
-                    <button type="submit" class="btn">Alterar E-mail</button>
-                </div>
-            </div>
-        </form>
-        <br />
-
-        <form action="#" id="form-homejogoteca">
-            <div class="form-group">
-                <label for="homejogoteca">Home - Jogoteca</label>
-                <textarea id="homejogoteca" name="homejogoteca" placeholder="Digite o texto do Home - Jogoteca" required></textarea>
-                <div class="button-container">
-                    <button type="submit" class="btn">Alterar texto Home - Jogoteca</button>
-                </div>
-            </div>
-        </form>
-        <br />
-
-        <form action="#" id="form-sobrenosjogoteca">
-            <div class="form-group">
-                <label for="sobrenosjogoteca">Home - Jogoteca</label>
-                <textarea id="sobrenosjogoteca" name="sobrenosjogoteca" placeholder="Digite o texto Home - Sobre nós" required></textarea>
-                <div class="button-container">
-                    <button type="submit" class="btn">Alterar texto Home - Sobre nós</button>
-                </div>
-            </div>
-        </form>
-        <br />
-
-        <form action="#" id="form-containerlaranja">
-            <div class="form-group">
-                <label for="containerlaranja">Benefícios - Container Laranja</label>
-                <textarea id="containerlaranja" name="containerlaranja" placeholder="Digite o texto do conteiner laranja" required></textarea>
-                <div class="button-container">
-                    <button type="submit" class="btn">Alterar texto container laranja</button>
-                </div>
-            </div>
-        </form>
-        <br />
-
-        <form action="#" id="form-beneficiosjogoteca">
-            <div class="form-group">
-                <label for="beneficiosjogoteca">Benefícios - Jogoteca</label>
-                <textarea id="beneficiosjogoteca" name="beneficiosjogoteca" placeholder="Digite o texto do beneficios jogoteca" required></textarea>
-                <div class="button-container">
-                    <button type="submit" class="btn">Alterar texto beneficios jogoteca</button>
-                </div>
-            </div>
-        </form>
-        <br />
-
-        <form action="#" id="form-beneficiosbrinquedos">
-            <div class="form-group">
-                <label for="beneficiosbrinquedos">Benefícios - Brinquedos</label>
-                <textarea id="beneficiosbrinquedos" name="beneficiosbrinquedos" placeholder="Digite o texto do beneficios brinquedos" required></textarea>
-                <div class="button-container">
-                    <button type="submit" class="btn">Alterar texto beneficios brinquedos</button>
-                </div>
-            </div>
-        </form>
-        <br />
-
-        <form action="#" id="form-beneficiosoficinas">
-            <div class="form-group">
-                <label for="beneficiosoficinas">Benefícios - Oficinas</label>
-                <textarea id="beneficiosoficinas" name="beneficiosoficinas" placeholder="Digite o texto do beneficios oficinas" required></textarea>
-                <div class="button-container">
-                    <button type="submit" class="btn">Alterar texto beneficios oficinas</button>
-                </div>
-            </div>
-        </form>
-        <br />
-
-        <form action="#" id="form-oficinacf">
-            <div class="form-group">
-                <label for="oficinacf">Como funciona - Oficinas</label>
-                <textarea id="oficinacf" name="oficinacf" placeholder="Digite o texto para o campo Como funciona - Oficinas" required></textarea>
-                <div class="button-container">
-                    <button type="submit" class="btn">Alterar texto Como funciona - Oficinas</button>
-                </div>
-            </div>
-        </form>
-        <br />
-
-        <form action="#" id="form-containerazulcf">
-            <div class="form-containerazulcf">
-                <label for="containerazulcf">Como funciona - Container Azul</label>
-                <textarea id="containerazulcf" name="containerazulcf" placeholder="Digite o texto para o campo Como funciona - Container Azul" required></textarea>
-                <div class="button-container">
-                    <button type="submit" class="btn">Alterar texto Como funciona - Container Azul</button>
-                </div>
-            </div>
-        </form>
-
-        <div class="image-container">
-            <img src="../../assets/sol_logo.svg" alt="logo passatempo">
+      <form id="form-email" action="#">
+        <div class="form-group">
+          <label for="email">Alterar E-mail Principal</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Digite o novo e-mail principal"
+            required
+          />
+          <div class="button-container">
+            <button type="submit" class="btn">Alterar E-mail</button>
+          </div>
         </div>
+      </form>
+      <br />
+
+      <form action="#" id="form-homejogoteca">
+        <div class="form-group">
+          <label for="homejogoteca">Home - Jogoteca</label>
+          <textarea
+            id="homejogoteca"
+            name="homejogoteca"
+            placeholder="Digite o texto do Home - Jogoteca"
+            required
+          ></textarea>
+          <div class="button-container">
+            <button type="submit" class="btn">
+              Alterar texto Home - Jogoteca
+            </button>
+          </div>
+        </div>
+      </form>
+      <br />
+
+      <form action="#" id="form-sobrenosjogoteca">
+        <div class="form-group">
+          <label for="sobrenosjogoteca">Home - Jogoteca</label>
+          <textarea
+            id="sobrenosjogoteca"
+            name="sobrenosjogoteca"
+            placeholder="Digite o texto Home - Sobre nós"
+            required
+          ></textarea>
+          <div class="button-container">
+            <button type="submit" class="btn">
+              Alterar texto Home - Sobre nós
+            </button>
+          </div>
+        </div>
+      </form>
+      <br />
+
+      <form action="#" id="form-containerlaranja">
+        <div class="form-group">
+          <label for="containerlaranja">Benefícios - Container Laranja</label>
+          <textarea
+            id="containerlaranja"
+            name="containerlaranja"
+            placeholder="Digite o texto do conteiner laranja"
+            required
+          ></textarea>
+          <div class="button-container">
+            <button type="submit" class="btn">
+              Alterar texto container laranja
+            </button>
+          </div>
+        </div>
+      </form>
+      <br />
+
+      <form action="#" id="form-beneficiosjogoteca">
+        <div class="form-group">
+          <label for="beneficiosjogoteca">Benefícios - Jogoteca</label>
+          <textarea
+            id="beneficiosjogoteca"
+            name="beneficiosjogoteca"
+            placeholder="Digite o texto do beneficios jogoteca"
+            required
+          ></textarea>
+          <div class="button-container">
+            <button type="submit" class="btn">
+              Alterar texto beneficios jogoteca
+            </button>
+          </div>
+        </div>
+      </form>
+      <br />
+
+      <form action="#" id="form-beneficiosbrinquedos">
+        <div class="form-group">
+          <label for="beneficiosbrinquedos">Benefícios - Brinquedos</label>
+          <textarea
+            id="beneficiosbrinquedos"
+            name="beneficiosbrinquedos"
+            placeholder="Digite o texto do beneficios brinquedos"
+            required
+          ></textarea>
+          <div class="button-container">
+            <button type="submit" class="btn">
+              Alterar texto beneficios brinquedos
+            </button>
+          </div>
+        </div>
+      </form>
+      <br />
+
+      <form action="#" id="form-beneficiosoficinas">
+        <div class="form-group">
+          <label for="beneficiosoficinas">Benefícios - Oficinas</label>
+          <textarea
+            id="beneficiosoficinas"
+            name="beneficiosoficinas"
+            placeholder="Digite o texto do beneficios oficinas"
+            required
+          ></textarea>
+          <div class="button-container">
+            <button type="submit" class="btn">
+              Alterar texto beneficios oficinas
+            </button>
+          </div>
+        </div>
+      </form>
+      <br />
+
+      <form action="#" id="form-oficinacf">
+        <div class="form-group">
+          <label for="oficinacf">Como funciona - Oficinas</label>
+          <textarea
+            id="oficinacf"
+            name="oficinacf"
+            placeholder="Digite o texto para o campo Como funciona - Oficinas"
+            required
+          ></textarea>
+          <div class="button-container">
+            <button type="submit" class="btn">
+              Alterar texto Como funciona - Oficinas
+            </button>
+          </div>
+        </div>
+      </form>
+      <br />
+
+      <form action="#" id="form-containerazulcf">
+        <div class="form-containerazulcf">
+          <label for="containerazulcf">Como funciona - Container Azul</label>
+          <textarea
+            id="containerazulcf"
+            name="containerazulcf"
+            placeholder="Digite o texto para o campo Como funciona - Container Azul"
+            required
+          ></textarea>
+          <div class="button-container">
+            <button type="submit" class="btn">
+              Alterar texto Como funciona - Container Azul
+            </button>
+          </div>
+        </div>
+      </form>
+
+      <div class="image-container">
+        <img src="../../assets/sol_logo.svg" alt="logo passatempo" />
+      </div>
     </div>
     <script src="./script.js" type="module"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-</body>
-
+  </body>
 </html>
