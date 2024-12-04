@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="../../assets/sol_logo.svg">
+    <link rel="icon" href="../../assets/sol_logo.svg" />
     <title>Doe</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
@@ -16,7 +16,7 @@
       rel="stylesheet"
     />
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
     <script>
@@ -24,18 +24,18 @@
         const hamburger = document.getElementById("hamburger");
         const navList = document.getElementById("nav-list");
         const overlay = document.getElementById("overlay");
-        
+
         hamburger.addEventListener("click", () => {
           navList.classList.toggle("active"); // Ativa/desativa o menu
           overlay.classList.toggle("active"); // Ativa/desativa o overlay
         });
-        
+
         overlay.addEventListener("click", () => {
           navList.classList.remove("active");
           overlay.classList.remove("active");
         });
       });
-      </script>
+    </script>
     <header class="header">
       <nav class="nav">
         <img src="../../assets/sol_logo.svg" alt="Random Image" />
@@ -54,7 +54,9 @@
             <a id="" href="../comoFunciona/index.html">Como funciona</a>
           </li>
           <li>
-            <a class="doe" id="selected" href="../doe/Doe.html">Doe<br />Agora</a>
+            <a class="doe" id="selected" href="../doe/Doe.html"
+              >Doe<br />Agora</a
+            >
           </li>
         </ul>
       </nav>
@@ -114,6 +116,16 @@
         </div>
       </div>
     </div>
+    <div vw class="enabled">
+      <div vw-access-button class="active"></div>
+      <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+      </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+      new window.VLibras.Widget("https://vlibras.gov.br/app");
+    </script>
     <footer class="footer">
       <div class="contatos">
         <h1>Contatos</h1>
@@ -121,14 +133,10 @@
         <p>Rua dos Democratas, 975, São Paulo, Brasil</p>
       </div>
       <div class="redesSociais">
-        <a
-          href="https://www.instagram.com/passatempoeducativo"
-        >
+        <a href="https://www.instagram.com/passatempoeducativo">
           <img src="../../assets/Frame.svg" alt="Instagram" />
         </a>
-        <a
-          href="https://api.whatsapp.com/send?phone=%2B5511997579540"
-        >
+        <a href="https://api.whatsapp.com/send?phone=%2B5511997579540">
           <img src="../../assets/whatsapp-svgrepo-com 1.svg" alt="Whatsapp" />
         </a>
         <a
