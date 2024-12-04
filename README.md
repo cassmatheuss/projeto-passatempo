@@ -2,7 +2,7 @@
 - Giovanna Lara RA: 24.01779-5
   (fez página catálogo e doe)
 - Matheus da Cunha Castilho RA: 23.01178-5
-  (fez backend completo, admin e login)
+  (fez backend completo, paginas admin e login)
 - Luisa Lério Leite RA: 24.01218-0
   (fez a página benefícios e doe)
 - Tiago Tokugi de Albuquerque Massuda RA: 24.01217-3
@@ -31,26 +31,59 @@ O principal objetivo deste redesign é melhorar a experiência do usuário, mode
 projeto-passatempo/
 ├── packages/
 │   ├── backend/
+│   │   └── config/
+│   │   │   └── db.js
+│   │   └── services/
+│   │   │   └── email/
+│   │   │   │   └── email.controler.js
+│   │   │   │   └── email.model.js
+│   │   │   │   └── email.respository.js
+│   │   │   │   └── email.service.js
+│   │   │   └── texts/
+│   │   │   │   └── texts.controler.js
+│   │   │   │   └── texts.model.js
+│   │   │   │   └── texts.respository.js
+│   │   │   │   └── texts.service.js
+│   │   │   └── users/
+│   │   │   │   └── users.controler.js
+│   │   │   │   └── users.model.js
+│   │   │   │   └── users.respository.js
+│   │   │   │   └── users.service.js
 │   │   └── index.js
 │   └── frontend/
 │       └── assets/
-│       │   └── 
+│       │   └── (todas as imagens do projeto)
 │       └── pages/
 │           └── catalogo/
-│           │   └── 
-│           │   └── 
+│           │   └── catalogo.html
+│           │   └── style.css
 │           └── home/
-│           │   └── 
-│           │   └── 
+│           │   └── home.html
+│           │   └── script.js
+│           │   └── style.css
+│           └── comoFunciona/
+│           │   └── formulario.js
+│           │   └── index.html
+│           │   └── script.js
+│           │   └── styles.css
 │           └── beneficios/
-│           │   └── 
-│           │   └── 
+│           │   └── carrossel.js
+│           │   └── index.html
+│           │   └── navbar.js
+│           │   └── script.js
+│           │   └── style.css
 │           └── doe/
-│           │   └── 
-│           │   └── 
-│           └── areaRestrita/
-│               └── 
-│               └── 
+│           │   └── Doe.html
+│           │   └── index.js
+│           │   └── style.css
+│           └── login/
+│           │   └── index.html
+│           │   └── script.js
+│           │   └── style.css
+│           └── admin/
+│               └── index.html
+│               └── script.js
+│               └── style.css
 ├── package.json
 ├── LICENSE
 ├── README.md
