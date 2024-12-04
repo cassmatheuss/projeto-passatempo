@@ -169,6 +169,22 @@ window.onload = async function () {
     } catch (error) {
         alert('Não foi possível alterar o texto.');
     }
+
+    try {
+        const texto = await getTexto('transferenciadoacao');
+        const textoField = document.getElementById('containerTransferenciaBancaria');
+        textoField.value = texto;
+    } catch (error) {
+        alert('Não foi possível alterar o texto.');
+    }
+
+    try {
+        const texto = await getTexto('containerChavePix');
+        const textoField = document.getElementById('containerChavePix');
+        textoField.value = texto;
+    } catch (error) {
+        alert('Não foi possível alterar o texto.');
+    }
 };
 
 document.getElementById('form-email').addEventListener('submit', async function (event) {
@@ -366,6 +382,48 @@ document.getElementById('form-containerazulcf').addEventListener('submit', async
 
     try {
         await setTexto('containerazulcf', textoValue);
+        alert('Texto alterado.'); 
+    } catch (error) {
+        alert('Não foi possível alterar o texto.');
+    }
+});
+
+document.getElementById('form-containerTransferenciaBancaria').addEventListener('submit', async function (event) {
+    event.preventDefault();
+
+    const texto = document.getElementById('containerTransferenciaBancaria');
+    const textoValue = texto.value;
+
+    console.log('Formulário enviado');
+
+    if (!textoValue) {
+        alert('Por favor, insira um texto válido.');
+        return;
+    }
+
+    try {
+        await setTexto('transferenciadoacao', textoValue);
+        alert('Texto alterado.'); 
+    } catch (error) {
+        alert('Não foi possível alterar o texto.');
+    }
+});
+
+document.getElementById('form-containerChavePix').addEventListener('submit', async function (event) {
+    event.preventDefault();
+
+    const texto = document.getElementById('containerChavePix');
+    const textoValue = texto.value;
+
+    console.log('Formulário enviado');
+
+    if (!textoValue) {
+        alert('Por favor, insira um texto válido.');
+        return;
+    }
+
+    try {
+        await setTexto('containerChavePix', textoValue);
         alert('Texto alterado.'); 
     } catch (error) {
         alert('Não foi possível alterar o texto.');

@@ -9,13 +9,13 @@
       href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Grandiflora+One&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
       rel="stylesheet"
     />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="./style.css">
   </head>
   <body>
@@ -24,18 +24,18 @@
         const hamburger = document.getElementById("hamburger");
         const navList = document.getElementById("nav-list");
         const overlay = document.getElementById("overlay");
-
+        
         hamburger.addEventListener("click", () => {
           navList.classList.toggle("active"); // Ativa/desativa o menu
           overlay.classList.toggle("active"); // Ativa/desativa o overlay
         });
-
+        
         overlay.addEventListener("click", () => {
           navList.classList.remove("active");
           overlay.classList.remove("active");
         });
       });
-    </script>
+      </script>
     <header class="header">
       <nav class="nav">
         <img src="../../assets/sol_logo.svg" alt="Random Image" />
@@ -139,5 +139,6 @@
         </a>
       </div>
     </footer>
+    <script src="./index.js"></script>
   </body>
 </html>

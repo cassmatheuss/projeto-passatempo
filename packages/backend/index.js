@@ -12,7 +12,6 @@ const port = 3000
 app.use( cors() )
 app.use(express.json());
 
-//middlewares
 app.use('/users', userController);
 app.use('/texts', textController);
 app.use('/email', emailController);
