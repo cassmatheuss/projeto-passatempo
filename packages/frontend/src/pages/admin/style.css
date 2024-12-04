@@ -109,20 +109,18 @@ code {
 }
 
 .header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
   height: 92px;
   display: flex;
   flex-direction: row;
-  align-items: center;
+  top: 0;
   background-color: #6787e7ba;
   backdrop-filter: blur(10px);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   z-index: 10;
+  position: fixed;
+  width: 100%;
+  align-items: center;
   padding-left: 10%;
-  padding-right: 10%;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
 }
 
 .overlay {
@@ -166,7 +164,7 @@ code {
 }
 
 .list.active {
-  transform: translateX(0);
+  transform: translateX(0); /* Entra na tela */
 }
 
 .doe {
@@ -198,12 +196,11 @@ code {
 
 li > a {
   text-decoration: none;
-  color: white;
-  text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.5);
+  color: black;
 }
 
 li > a:hover {
-  color: #f1f1f1;
+  color: rgb(61, 61, 61);
   text-decoration: underline;
   text-underline-offset: 5px;
 }
@@ -212,7 +209,7 @@ li > a:hover {
   display: none;
   flex-direction: column;
   cursor: pointer;
-  margin-right: 4%;
+  margin-right: 8%;
   z-index: 10;
 }
 
@@ -224,15 +221,17 @@ li > a:hover {
   transition: 0.3s ease-in-out;
 }
 
+/* Mobile styles */
 @media (max-width: 768px) {
   .list li {
-    opacity: 0;
-    transform: translateX(200px);
+    opacity: 0; /* Oculta inicialmente */
+    transform: translateX(200px); /* Posição inicial */
     transition:
       opacity 0.5s ease,
-      transform 0.5s ease;
+      transform 0.5s ease; /* Aplica a transição */
   }
 
+  /* Transição em cascata para os itens da lista */
   .list.active li:nth-child(1) {
     transition-delay: 0.1s;
     opacity: 1;
@@ -257,11 +256,13 @@ li > a:hover {
     transform: translateX(0);
   }
 
+  /* delay */
+
   .list {
     font-family: "Ubuntu", sans-serif;
     font-weight: 700;
     gap: 4%;
-    color: white;
+    color: black;
     width: 40%;
     height: 100vh;
     display: flex;
@@ -273,8 +274,8 @@ li > a:hover {
     top: 0;
     right: 0;
     background-color: #6787e7;
-    transform: translateX(100%);
-    transition: all 3s;
+    transform: translateX(100%); /* Fora da tela inicialmente */
+    transition: all 3s; /* Controla a transição de entrada */
     transition-duration: 300ms;
     padding-top: 90px;
     z-index: 15;
