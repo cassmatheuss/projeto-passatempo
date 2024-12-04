@@ -106,6 +106,7 @@ Para iniciar o servidor local, execute:
 ```bash
 npm start
 ```
+importante comentar também que a área restrita só funcionara com um arquivo .env contendo os links para as rotas, sem isso nenhuma das funcionalidades de alterar os textos funcionará e o login também não. O arquivo .env não fica no repositório por questões de segurança.
 
 ## Funcionalidades
 Design responsivo para diversos dispositivos.
