@@ -19,23 +19,6 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const hamburger = document.getElementById("hamburger");
-        const navList = document.getElementById("nav-list");
-        const overlay = document.getElementById("overlay");
-
-        hamburger.addEventListener("click", () => {
-          navList.classList.toggle("active"); // Ativa/desativa o menu
-          overlay.classList.toggle("active"); // Ativa/desativa o overlay
-        });
-
-        overlay.addEventListener("click", () => {
-          navList.classList.remove("active");
-          overlay.classList.remove("active");
-        });
-      });
-    </script>
     <header class="header">
       <nav class="nav">
         <img src="../../assets/sol_logo.svg" alt="Random Image" />
@@ -148,5 +131,22 @@
       </div>
     </footer>
     <script src="./index.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const hamburger = document.getElementById("hamburger");
+        const navList = document.getElementById("nav-list");
+        const overlay = document.getElementById("overlay");
+
+        hamburger.addEventListener("click", () => {
+          navList.classList.toggle("active"); // Ativa/desativa o menu
+          overlay.classList.toggle("active"); // Ativa/desativa o overlay
+        });
+
+        overlay.addEventListener("click", () => {
+          navList.classList.remove("active");
+          overlay.classList.remove("active");
+        });
+      });
+    </script>
   </body>
 </html>
