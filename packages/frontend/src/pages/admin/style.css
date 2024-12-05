@@ -21,6 +21,13 @@ html {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+.botaoTitulo {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 h1 {
   text-align: center;
   color: #333;
@@ -229,6 +236,10 @@ li > a:hover {
     transition:
       opacity 0.5s ease,
       transform 0.5s ease; /* Aplica a transição */
+  }
+
+  .botaoTitulo {
+    flex-direction: column;
   }
 
   /* Transição em cascata para os itens da lista */
